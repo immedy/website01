@@ -1,75 +1,70 @@
 @extends('layout.admin')
 @section('dashboard')
-    <div class="container-xxl flex-grow-1 container-p-y">
-        <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Extended UI /</span> Text Divider</h4>
-
-        <div class="row">
-            <!-- Basic -->
-            <div class="col-md-12 mb-4">
-                <div class="card">
-                    <h5 class="card-header">Basic</h5>
-                    <div class="card-body">
-                        <div class="divider">
-                            <div class="divider-text">Text</div>
-                        </div>
-                    </div>
+<div class="card">
+    <h5 class="card-header">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#backDropModal" >
+            Tambah Pengguna
+          </button>
+    </h5>
+          <!-- Button trigger modal -->
+          
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Username</th>
+            <th>Unit</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="table-border-bottom-0">
+          <tr>
+           
+            <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
+            <td>Albert Cook</td>
+            <td>PPDE</td>
+            <td><span class="badge bg-label-primary me-1">Active</span></td>
+            <td>
+              <div class="dropdown">
+                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="javascript:void(0);"
+                    ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                  >
+                  <a class="dropdown-item" href="javascript:void(0);"
+                    ><i class="bx bx-trash me-1"></i> Delete</a
+                  >
                 </div>
-            </div>
-            <!-- /Basic -->
-
-            <!-- Text Alignment -->
-            <div class="col-md-12 mb-4">
-                <div class="card">
-                    <h5 class="card-header">Alignment</h5>
-                    <div class="card-body">
-                        <div class="divider text-start">
-                            <div class="divider-text">Start</div>
-                        </div>
-                        <div class="divider text-start-center">
-                            <div class="divider-text">Start-Center</div>
-                        </div>
-                        <div class="divider">
-                            <div class="divider-text">Center (Default)</div>
-                        </div>
-                        <div class="divider text-end-center">
-                            <div class="divider-text">End-Center</div>
-                        </div>
-                        <div class="divider text-end">
-                            <div class="divider-text">End</div>
-                        </div>
-                    </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            
+            <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>React Project</strong></td>
+            <td>Barry Hunter</td>
+            <td>PPDE</td>
+            <td>
+                <span class="badge bg-label-success me-1">Completed</span></td>
+            <td>
+              <div class="dropdown">
+                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                  <i class="bx bx-dots-vertical-rounded"></i>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="javascript:void(0);"
+                    ><i class="bx bx-edit-alt me-1"></i> Edit</a
+                  >
+                  <a class="dropdown-item" href="javascript:void(0);"
+                    ><i class="bx bx-trash me-1"></i> Delete</a
+                  >
                 </div>
-            </div>
-            <!-- /Text Alignment -->
-
-            <!-- Divider Colors -->
-            <div class="col-md-12 mb-4">
-                <div class="card">
-                    <h5 class="card-header">Colors</h5>
-                    <div class="card-body">
-                        <div class="divider divider-primary">
-                            <div class="divider-text">Primary</div>
-                        </div>
-                        <div class="divider divider-success">
-                            <div class="divider-text">Success</div>
-                        </div>
-                        <div class="divider divider-danger">
-                            <div class="divider-text">Danger</div>
-                        </div>
-                        <div class="divider divider-warning">
-                            <div class="divider-text">Warning</div>
-                        </div>
-                        <div class="divider divider-info">
-                            <div class="divider-text">Info</div>
-                        </div>
-                        <div class="divider divider-dark">
-                            <div class="divider-text">Dark</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /Divider Colors -->
-        </div>
-    </div>
-    <!-- / Content -->
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
 @endsection
