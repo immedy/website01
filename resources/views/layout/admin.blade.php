@@ -172,7 +172,7 @@
                         <span class="menu-header-text">Logout</span>
                     </li>
                     <li class="menu-item">
-                        <a href="index.html" class="menu-link">
+                        <a href="/logout" class="menu-link">
                             <i class="bx bx-power-off me-2"></i>
                             <div data-i18n="Analytics">Logout</div>
                         </a>
@@ -218,6 +218,7 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    @include('sweetalert::alert')
 </body>
 
 </html>

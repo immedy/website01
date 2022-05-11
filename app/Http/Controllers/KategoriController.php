@@ -6,6 +6,7 @@ use App\Models\refkategori;
 use App\Models\refruangan;
 use App\Models\refsmf;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class KategoriController extends Controller
 {
@@ -31,7 +32,10 @@ class KategoriController extends Controller
         ]);
         $ValidasiSmf['status'] = 1;
         $refsmf = refsmf::create($ValidasiSmf);
-        return redirect('/kategori');
+        if ($ValidasiSmf) {
+            Alert::toast('Berhasil');
+            return redirect('/kategori');
+        }
     }
 
     public function refberita(Request $request)

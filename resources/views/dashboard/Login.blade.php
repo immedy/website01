@@ -63,8 +63,8 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="admin/assets/js/config.js"></script>
   </head>
-
   <body>
+    @include('sweetalert::alert')
     <!-- Content -->
 
     <div class="container-xxl">
@@ -73,10 +73,12 @@
           <!-- Register -->
           <div class="card">
             <div class="card-body">
-              <form id="formAuthentication" class="mb-3" action="/login" method="post">
+              <form id="formAuthentication" class="mb-3" action="/auth" method="post">
+                @csrf
+
                 <div class="mb-3">
                   <label for="email" class="form-label">Username</label>
-                  <input type="text" class="form-control" id="email" name="email-username" placeholder="Enter your username"
+                  <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username"
                     autofocus
                   />
                 </div>
@@ -85,11 +87,7 @@
                     <label class="form-label" for="password">Password</label>
                   </div>
                   <div class="input-group input-group-merge">
-                    <input
-                      type="password"
-                      id="password"
-                      class="form-control"
-                      name="password"
+                    <input type="password" id="password" class="form-control" name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
                     />

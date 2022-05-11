@@ -26,6 +26,9 @@ Route::get('/admin', function () {
 Route::get('/pegawai', [UserController::class, 'index']);
 Route::post('/PegawaiInsert', [UserController::class, 'store']);
 Route::get('/login', [UserController::class, 'login']);
+Route::post('/auth', [UserController::class, 'authenticate']);
+route::post('/logout', [UserController::class, 'logout']);
+
 
 
 Route::get('/kategori', [KategoriController::class, 'index']);
