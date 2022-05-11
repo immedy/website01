@@ -146,7 +146,7 @@
                             </li>
                         </ul>
                     <li class="menu-item">
-                        <a href="index.html" class="menu-link">
+                        <a href="/dokter" class="menu-link">
                             <i class="bx bx-user-voice me-2"></i>
                             <div data-i18n="Analytics">Input Dokter</div>
                         </a>
@@ -163,15 +163,9 @@
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="index.html" class="menu-link">
+                        <a href="/kategori" class="menu-link">
                             <i class="bx bx-git-branch me-2"></i>
-                            <div data-i18n="Analytics">Kategory Dokter</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="index.html" class="menu-link">
-                            <i class="bx bx-news me-2"></i>
-                            <div data-i18n="Analytics">Kategory Berita</div>
+                            <div data-i18n="Analytics">Referensi Kategori</div>
                         </a>
                     </li>
                     <li class="menu-header small text-uppercase">

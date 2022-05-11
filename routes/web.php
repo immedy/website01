@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +23,16 @@ Route::get('/admin', function () {
     return view('dashboard.home');
 });
 
-Route::get('/pegawai', function () {
-    return view('dashboard.pegawai');
+Route::get('/pegawai', [UserController::class, 'index']);
+Route::post('/PegawaiInsert', [UserController::class, 'store']);
+Route::get('/login', [UserController::class, 'login']);
+
+
+Route::get('/kategori', [KategoriController::class, 'index']);
+Route::post('/kategorismf', [KategoriController::class, 'refsmf']);
+Route::post('/kategoriberita', [KategoriController::class, 'refberita']);
+Route::post('/kategoriruangan', [KategoriController::class, 'refruangan']);
+
+Route::get('/dokter', function () {
+    return view('dashboard.dokter');
 });
