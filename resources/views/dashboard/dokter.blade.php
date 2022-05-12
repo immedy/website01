@@ -25,47 +25,31 @@
                 </tr>
             </thead>
             <tbody class="table-border-bottom-0">
-                <tr>
-                    <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>Angular Project</strong></td>
-                    <td>Albert Cook</td>
-                    <td>PPDE</td>
-                    <td><span class="badge bg-label-primary me-1">Active</span></td>
-                    <td>
-                        <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
-                                    Edit</a>
-                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
-                                    Delete</a>
+                @foreach ($Dokter as $p)
+                    <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $p->nama }}</strong></td>
+                        <td>{{ $p->refsmf->deskripsi }}</td>
+                        @if ($p->residen == 0)
+                            <td><span class="badge bg-label-primary me-1">Tidak</span></td>
+                        @else
+                            <td><span class="badge bg-label-primary me-1">YA</span></td>
+                        @endif
+                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                        <td>
+                            <div class="dropdown">
+                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                    <i class="bx bx-dots-vertical-rounded"></i>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
+                                        Edit</a>
+                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
+                                        Delete</a>
+                                </div>
                             </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td><i class="fab fa-react fa-lg text-info"></i> <strong>React Project</strong></td>
-                    <td>Barry Hunter</td>
-                    <td>PPDE</td>
-                    <td>
-                        <span class="badge bg-label-success me-1">Completed</span>
-                    </td>
-                    <td>
-                        <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
-                                    Edit</a>
-                                <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
-                                    Delete</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -73,7 +57,8 @@
 
 <div class="modal fade" id="TambahDokterModal" data-bs-backdrop="static" tabindex="-1">
     <div class="modal-dialog">
-        <form class="modal-content">
+        <form class="modal-content" action="" method="" enctype="">
+            @csrf
             <div class="modal-header">
                 <h5 class="modal-title" id="backDropModalTitle">Tambah Pengguna</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -85,23 +70,36 @@
                         <input type="text" name="nama" id="nama" class="form-control" placeholder="Enter Name" />
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col mb-3">
-                        <label for="username" class="form-label">Dokter Spesialis</label>
-                        <input type="text" name="username" id="username" class="form-control"
-                            placeholder="Enter Username" />
+                <div class="row g-2 mb-2">
+                    <div class="col mb-0">
+                        <label for="dobBackdrop" class="form-label">Pilih SMF</label>
+                        <select class="form-control" id="refsmf_id" name="refsmf_id">
+                            <option selected disabled value="">Silahkan Pilih</option>
+                            @foreach ($smf as $p)
+                                <option value="{{ $p->id }}">{{ $p->deskripsi }}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
-                <div class="row g-2">
-                    <div class="col mb-0">
-                        <label for="password" class="form-label"></label>
-                        <input type="password" name="password" id="password" class="form-control"
-                            placeholder="xxxxxxxxx" />
+                <div class="row ">
+                    <div class="col mb-3">
+                        <label for="formFile" class="form-label">Upload Foto Dokter [JPEG, Max 2MB]</label>
+                        <input class="form-control" type="file" id="formFile" />
                     </div>
-                    <div class="col mb-0">
-                        <label for="dobBackdrop" class="form-label">Ruangan</label>
-                        <input type="text" id="dobBackdrop" class="form-control" placeholder="DD / MM / YY" />
+                </div>
+                <div class="col-md">
+                    <label class="">Residen</label>
+                    <div class="form-check form-check-inline mt-3">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1" />
+                        <label class="form-check-label" for="inlineRadio1">YA</label>
                     </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2" />
+                        <label class="form-check-label" for="inlineRadio2">TIDAK</label>
+                    </div>
+
                 </div>
             </div>
             <div class="modal-footer">

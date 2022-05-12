@@ -7,7 +7,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Admin</title>
+    <title>Halaman Admin</title>
 
     <meta name="description" content="" />
 
@@ -172,10 +172,13 @@
                         <span class="menu-header-text">Logout</span>
                     </li>
                     <li class="menu-item">
-                        <a href="/logout" class="menu-link">
-                            <i class="bx bx-power-off me-2"></i>
-                            <div data-i18n="Analytics">Logout</div>
-                        </a>
+                        <form action="/logout" method="post">
+                            @csrf
+                            <button href="" class="menu-link btn rounded-pill btn-outline-secondary" type="submit">
+                                <i class="bx bx-power-off me-2"></i>
+                                <div data-i18n="Analytics">Logout</div>
+                            </button>
+                        </form>
                     </li>
                 </ul>
             </aside>

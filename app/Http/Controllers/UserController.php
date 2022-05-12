@@ -15,6 +15,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function home()
+    {
+        return view('dashboard.home');
+    }
     public function index()
     {
         return view('dashboard.pegawai', [
@@ -31,8 +35,8 @@ class UserController extends Controller
         ]);
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            Alert::toast('Selamat Datang', 'success');
-            return redirect()->intended('/adminb');
+            Alert::toast('Selamat Datang ', 'success');
+            return redirect()->intended('/admin');
         }
         Alert::Toast('Username Dan Password Tidak Sama', 'error');
         return back();

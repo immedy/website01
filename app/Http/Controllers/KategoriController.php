@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\dokter;
 use App\Models\refkategori;
 use App\Models\refruangan;
 use App\Models\refsmf;
@@ -21,7 +22,8 @@ class KategoriController extends Controller
         return view('dashboard.kategori', [
             "smf" => refsmf::all(),
             "berita" => refkategori::all(),
-            "ruangan" => refruangan::all()
+            "ruangan" => refruangan::all(),
+            "dokter" => dokter::all()
         ]);
     }
 
