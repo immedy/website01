@@ -6,6 +6,7 @@ use App\Models\dokter;
 use App\Models\refruangan;
 use App\Models\refsmf;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DokterController extends Controller
 {
@@ -32,17 +33,19 @@ class DokterController extends Controller
     }
     public function store(Request $request)
     {
-        // $ValidasiDokter = $request->validate([
-        //     'nama' => 'required',
-        //     'refsmf_id' => 'required',
-        //     'foto' => 'required|image|mimes:jpg|max:2048',
-        //     'residen' => 'required'
-        // ]);
-        // $ValidasiDokter['status'] = 1;
-        // $ValidasiDokter['foto'] = $request->file('foto')->getClientOriginalName();
-        // $ValidasiDokter['foto'] = $request->file('images')->store('public/FotoDokter');
-        // dokter::create($ValidasiDokter);
-        // return redirect('/dokter');
+        $ValidasiDokter = $request->validate([
+            'nama' => 'required',
+            'refsmf_id' => 'required',
+            'foto' => 'required|image|mimes:jpeg|file|max:2048',
+            'residen' => 'required'
+        ]);
+        $ValidasiDokter['status'] = 1;        
+        $ValidasiDokter['foto'] = $request->file('foto')->store('FotoDokter');     
+        dokter::create($ValidasiDokter);
+        if ($ValidasiDokter) {
+            Alert::toast('Berhasil Menambahkan Dokter');
+        return redirect('/dokter');
+        }
     }
 
     /**

@@ -57,7 +57,7 @@
 
 <div class="modal fade" id="TambahDokterModal" data-bs-backdrop="static" tabindex="-1">
     <div class="modal-dialog">
-        <form class="modal-content" action="" method="" enctype="">
+        <form class="modal-content" action="/DokterInsert" method="post" enctype="multipart/form-data">
             @csrf
             <div class="modal-header">
                 <h5 class="modal-title" id="backDropModalTitle">Tambah Pengguna</h5>
@@ -84,19 +84,19 @@
                 <div class="row ">
                     <div class="col mb-3">
                         <label for="formFile" class="form-label">Upload Foto Dokter [JPEG, Max 2MB]</label>
-                        <input class="form-control" type="file" id="formFile" />
+                        <input class="form-control" type="file" id="foto" name="foto"/>
                     </div>
                 </div>
                 <div class="col-md">
                     <label class="">Residen</label>
                     <div class="form-check form-check-inline mt-3">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1" />
+                        <input class="form-check-input" type="radio" name="residen" id="residen"
+                            value="1" />
                         <label class="form-check-label" for="inlineRadio1">YA</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2" />
+                        <input class="form-check-input" type="radio" name="residen" id="residen"
+                            value="0" />
                         <label class="form-check-label" for="inlineRadio2">TIDAK</label>
                     </div>
 
@@ -106,7 +106,7 @@
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                     Close
                 </button>
-                <button type="button" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </div>
         </form>
     </div>

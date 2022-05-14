@@ -47,7 +47,10 @@ class KategoriController extends Controller
         ]);
         $ValidasiBerita['status'] = 1;
         $refkategori = refkategori::create($ValidasiBerita);
+        if ($ValidasiBerita) {
+            Alert::toast('Berhasil');
         return redirect('/kategori');
+        }
     }
 
     public function refruangan(Request $request)
@@ -57,7 +60,10 @@ class KategoriController extends Controller
         ]);
         $ValidasiRuangan['status'] = 1;
         $refruangan = refruangan::create($ValidasiRuangan);
+        if ($ValidasiRuangan) {
+            Alert::toast('Berhasil');
         return redirect('/kategori');
+        }
     }
 
 

@@ -25,6 +25,7 @@ Route::get('/pegawai', [UserController::class, 'index'])->middleware('auth');
 Route::post('/PegawaiInsert', [UserController::class, 'store'])->middleware('auth');
 
 Route::get('/dokter', [DokterController::class, 'index']);
+route::post('/DokterInsert',[DokterController::class, 'store']);
 
 
 
