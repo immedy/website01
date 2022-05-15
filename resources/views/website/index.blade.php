@@ -209,50 +209,21 @@
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Tenaga Kesehatan </h5>
-                <h1 class="mb-0">Dokter Umum, Dokter Spesialis Dan Dokter Residen</h1>
+                <h5 class="fw-bold text-primary text-uppercase">Tenaga Kesehatan Dayaku Raja</h5>
+                <h1 class="mb-0">Dokter Spesialis, Dokter Residen, Dokter Umum</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
+                @foreach ( $DokterSpesialis as $p)
                 <div class="testimonial-item bg-light my-4">
                     <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="website/img/testimonial-1.jpg"
-                            style="width: 60px; height: 60px;">
+                        <img class="img-fluid rounded" src="{{ asset('storage/' . $p->foto) }}" style="width: 60px; height: 60px;" >
                         <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
+                            <h4 class="text-primary mb-1"><A>{{ $p -> nama }}</A></h4>
+                            <small class="text-uppercase">{{ $p->refsmf->deskripsi }}</small>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="website/img/testimonial-2.jpg"
-                            style="width: 60px; height: 60px;">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="website/img/testimonial-3.jpg"
-                            style="width: 60px; height: 60px;">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="website/img/testimonial-4.jpg"
-                            style="width: 60px; height: 60px;">
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                </div>
+                </div>    
+                @endforeach                
             </div>
         </div>
     </div>

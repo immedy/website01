@@ -3,6 +3,7 @@
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,5 @@ Route::post('/kategoriruangan', [KategoriController::class, 'refruangan'])->midd
 
 
 // website
-Route::get('/', function () {
-    return view('website.index');
-});
+Route::get('/', [WebsiteController::class, 'index']);
+  
