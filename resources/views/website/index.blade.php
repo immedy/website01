@@ -219,7 +219,13 @@
                         <img class="img-fluid rounded" src="{{ asset('storage/' . $p->foto) }}" style="width: 60px; height: 60px;" >
                         <div class="ps-4">
                             <h4 class="text-primary mb-1"><A>{{ $p -> nama }}</A></h4>
-                            <small class="text-uppercase">{{ $p->refsmf->deskripsi }}</small>
+                            <small class="text-uppercase">{{ $p->refsmf->deskripsi }} 
+                            @if ($p->residen ==1)
+                                [RESIDEN]
+                                @else
+                                
+                            @endif
+                            </small>
                         </div>
                     </div>
                 </div>    
