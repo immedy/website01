@@ -25,8 +25,8 @@ route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 Route::get('/pegawai', [UserController::class, 'index'])->middleware('auth');
 Route::post('/PegawaiInsert', [UserController::class, 'store'])->middleware('auth');
 
-Route::get('/dokter', [DokterController::class, 'index']);
-route::post('/DokterInsert',[DokterController::class, 'store']);
+Route::get('/dokter', [DokterController::class, 'index'])->middleware('auth');
+route::post('/DokterInsert', [DokterController::class, 'store'])->middleware('auth');
 
 
 
@@ -39,4 +39,3 @@ Route::post('/kategoriruangan', [KategoriController::class, 'refruangan'])->midd
 
 // website
 Route::get('/', [WebsiteController::class, 'index']);
-  
