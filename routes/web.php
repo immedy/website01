@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
@@ -28,13 +29,13 @@ Route::post('/PegawaiInsert', [UserController::class, 'store'])->middleware('aut
 Route::get('/dokter', [DokterController::class, 'index'])->middleware('auth');
 route::post('/DokterInsert', [DokterController::class, 'store'])->middleware('auth');
 
-
-
-
 Route::get('/kategori', [KategoriController::class, 'index'])->middleware('auth');
 Route::post('/kategorismf', [KategoriController::class, 'refsmf'])->middleware('auth');
 Route::post('/kategoriberita', [KategoriController::class, 'refberita'])->middleware('auth');
 Route::post('/kategoriruangan', [KategoriController::class, 'refruangan'])->middleware('auth');
+
+Route::get('/berita', [BeritaController::class, 'index']);
+
 
 
 // website
