@@ -36,6 +36,7 @@ Route::post('/kategoriruangan', [KategoriController::class, 'refruangan'])->midd
 
 Route::get('/berita', [BeritaController::class, 'index'])->middleware('auth');
 Route::get('/berita/insert', [BeritaController::class, 'insert'])->middleware('auth');
+route::post('/berita/insert/simpan', [BeritaController::class, 'store'])->middleware('auth');
 
 
 
