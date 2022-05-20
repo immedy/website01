@@ -34,7 +34,8 @@ Route::post('/kategorismf', [KategoriController::class, 'refsmf'])->middleware('
 Route::post('/kategoriberita', [KategoriController::class, 'refberita'])->middleware('auth');
 Route::post('/kategoriruangan', [KategoriController::class, 'refruangan'])->middleware('auth');
 
-Route::get('/berita', [BeritaController::class, 'index']);
+Route::get('/berita', [BeritaController::class, 'index'])->middleware('auth');
+Route::get('/berita/insert', [BeritaController::class, 'insert'])->middleware('auth');
 
 
 

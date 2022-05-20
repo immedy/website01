@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\refkategori;
 use Illuminate\Http\Request;
+use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class BeritaController extends Controller
 {
@@ -15,12 +17,19 @@ class BeritaController extends Controller
     {
         return view('dashboard.BeritaKesehatan');
     }
+    public function insert()
+    {
+        return view('dashboard.InsertBerita', [
+            'kategori' => refkategori::all()
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
