@@ -8,7 +8,8 @@
                     <h5 class="mb-0">Berita</h5>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="/berita/insert/simpan" method="post">
+                        @csrf
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Judul</label>
                             <div class="col-sm-10">
@@ -40,7 +41,7 @@
 
                         <div class=" row justify-content-end">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Send</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
                         </div>
                     </form>
