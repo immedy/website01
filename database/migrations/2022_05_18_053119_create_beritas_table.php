@@ -21,6 +21,7 @@ return new class extends Migration
             $table->foreignId('ruangan_id');
             $table->foreignId('kategori_id');
             $table->boolean('status');
+            $table->string('foto');
             $table->timestamps();
         });
     }

@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\berita;
 use App\Models\refkategori;
 use Illuminate\Http\Request;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class BeritaController extends Controller
 {
@@ -15,7 +16,9 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        return view('dashboard.BeritaKesehatan');
+        return view('dashboard.BeritaKesehatan', [
+            'berita' => berita::all()
+        ]);
     }
     public function insert()
     {
@@ -43,7 +46,21 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $ValidasiBerita = $request->validate([
+            'judul' => 'required',
+            'berita' => 'required|',
+            'refkategori_id' => 'required',
+            'foto' => 'required|image|mimes:jpeg|file|max:2048',
+        ]);
+        $ValidasiBerita['user_id'] = auth()->user()->id;
+        $ValidasiBerita['refruangan_id'] = auth()->user()->refruangan_id;
+        $ValidasiBerita['status'] = 1;
+        $ValidasiBerita['foto'] = $request->file('foto')->store('FotoBerita');
+        berita::create($ValidasiBerita);
+        if ($ValidasiBerita) {
+            Alert::toast('Berhasil Menambahkan Berita');
+            return redirect('/berita');
+        }
     }
 
     /**
@@ -54,7 +71,6 @@ class BeritaController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**

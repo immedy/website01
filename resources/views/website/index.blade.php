@@ -9,7 +9,7 @@
     <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100" src="website/img/dara1.jpg" alt="Image">
+                <img class="w-100" src="/website/img/dara1.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100" src="website/img/carousel-2.jpg" alt="Image">
+                <img class="w-100" src="/website/img/dara2.jpg" alt="Image">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <div class="p-3" style="max-width: 900px;">
                         <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
@@ -213,23 +213,23 @@
                 <h1 class="mb-0">Dokter Spesialis, Dokter Residen, Dokter Umum</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-                @foreach ( $DokterSpesialis as $p)
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="{{ asset('storage/' . $p->foto) }}" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1"><A>{{ $p -> nama }}</A></h4>
-                            <small class="text-uppercase">{{ $p->refsmf->deskripsi }} 
-                            @if ($p->residen ==1)
-                                [RESIDEN]
-                                @else
-                                
-                            @endif
-                            </small>
+                @foreach ($DokterSpesialis as $p)
+                    <div class="testimonial-item bg-light my-4">
+                        <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                            <img class="img-fluid rounded" src="{{ asset('storage/' . $p->foto) }}"
+                                style="width: 60px; height: 60px;">
+                            <div class="ps-4">
+                                <h4 class="text-primary mb-1"><A>{{ $p->nama }}</A></h4>
+                                <small class="text-uppercase">{{ $p->refsmf->deskripsi }}
+                                    @if ($p->residen == 1)
+                                        [RESIDEN]
+                                    @else
+                                    @endif
+                                </small>
+                            </div>
                         </div>
                     </div>
-                </div>    
-                @endforeach                
+                @endforeach
             </div>
         </div>
     </div>
@@ -242,122 +242,35 @@
                 <h5 class="fw-bold text-primary text-uppercase">Berita Kesehatan</h5>
                 <h1 class="mb-0">Read The Latest Articles from Our Blog Post</h1>
             </div>
+
             <div class="row g-5">
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="website/img/blog-1.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                    Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
+                @foreach ($berita as $p)
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+                        <div class="blog-item bg-light rounded overflow-hidden">
+                            <div class="blog-img position-relative overflow-hidden">
+                                <img class="img-fluid" src="{{ asset('storage/' . $p->foto) }}" alt="">
+                                <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
+                                    href="">{{ $p->refkategori->deskripsi }}</a>
                             </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                            <div class="p-4">
+                                <div class="d-flex mb-3">
+                                    <small class="me-3"><i
+                                            class="far fa-user text-primary me-2"></i>{{ $p->user->nama }}
+                                    </small>
+                                    <small><i
+                                            class="far fa-calendar-alt text-primary me-2"></i>{{ $p->created_at }}</small>
+                                </div>
+                                <h4 class="mb-3">{{ $p->judul }}</h4>
+                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
+                                <a class="text-uppercase" href="/detail/{{ $p->id }}">Read More <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="website/img/blog-2.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                    Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="website/img/blog-3.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                    Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="website/img/blog-1.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                    Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="website/img/blog-2.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                    Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow slideInUp" data-wow-delay="0.9s">
-                    <div class="blog-item bg-light rounded overflow-hidden">
-                        <div class="blog-img position-relative overflow-hidden">
-                            <img class="img-fluid" src="website/img/blog-3.jpg" alt="">
-                            <a class="position-absolute top-0 start-0 bg-primary text-white rounded-end mt-5 py-2 px-4"
-                                href="">Web Design</a>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex mb-3">
-                                <small class="me-3"><i class="far fa-user text-primary me-2"></i>John
-                                    Doe</small>
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2045</small>
-                            </div>
-                            <h4 class="mb-3">How to build a website</h4>
-                            <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                            <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
+
+
         </div>
     </div>
 @endsection

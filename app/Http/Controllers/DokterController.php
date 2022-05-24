@@ -39,12 +39,12 @@ class DokterController extends Controller
             'foto' => 'required|image|mimes:jpeg|file|max:2048',
             'residen' => 'required'
         ]);
-        $ValidasiDokter['status'] = 1;        
-        $ValidasiDokter['foto'] = $request->file('foto')->store('FotoDokter');     
+        $ValidasiDokter['status'] = 1;
+        $ValidasiDokter['foto'] = $request->file('foto')->store('FotoDokter');
         dokter::create($ValidasiDokter);
         if ($ValidasiDokter) {
-            Alert::toast('Berhasil Menambahkan Dokter');
-        return redirect('/dokter');
+            Alert::toast('Berhasil Menambahkan Berita');
+            return redirect('/berita');
         }
     }
 

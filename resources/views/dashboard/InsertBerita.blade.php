@@ -8,7 +8,7 @@
                     <h5 class="mb-0">Berita</h5>
                 </div>
                 <div class="card-body">
-                    <form action="/berita/insert/simpan" method="post">
+                    <form action="/berita/insert/simpan" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Judul</label>
@@ -20,13 +20,22 @@
                             <label class="col-sm-2 col-form-label" for="basic-default-email">Kategori</label>
                             <div class="col-sm-10">
                                 <div class="input-group input-group-merge">
-                                    <select class="form-select" id="exampleFormControlSelect1"
+                                    <select class="form-select" id="refkategori_id" name="refkategori_id"
                                         aria-label="Default select example">
                                         <option selected disabled value="">Silahkan Pilih</option>
                                         @foreach ($kategori as $p)
                                             <option value="{{ $p->id }}">{{ $p->deskripsi }}</option>
                                         @endforeach
                                     </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="basic-default-email">Kategori</label>
+                            <div class="col-sm-10">
+                                <div class="col mb-3">
+                                    <input class="form-control" type="file" id="foto" name="foto" />
+                                    <label for="formFile" class="form-label">Upload Foto Berita [JPEG, Max 2MB]</label>
                                 </div>
                             </div>
                         </div>
