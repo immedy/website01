@@ -5,41 +5,6 @@
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner"></div>
     </div>
-    <!--Carousel Start -->
-    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="/website/img/dara1.jpg" alt="Image">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="w-100" src="/website/img/dara2.jpg" alt="Image">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital Solution
-                        </h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <!-- Carousel End -->
-
     <!-- Facts Start -->
     <div class="container-fluid facts py-9 pt-lg-0">
         <div class="container py-5 pt-lg-10">
@@ -261,16 +226,14 @@
                                             class="far fa-calendar-alt text-primary me-2"></i>{{ $p->created_at }}</small>
                                 </div>
                                 <h4 class="mb-3">{{ $p->judul }}</h4>
-                                <p>Dolor et eos labore stet justo sed est sed sed sed dolor stet amet</p>
-                                <a class="text-uppercase" href="/detail/{{ $p->id }}">Read More <i
+                                <p>{{ $p->exeprt }}</p>
+                                <a class="text-uppercase" href="/BeritaDetail/{{ $p->id }}">Read More <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-
-
         </div>
     </div>
 @endsection

@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Dashboard
-Route::get('/admin', [UserController::class, 'home'])->middleware('auth');
+Route::get('/admin', [UserController::class, 'home'])->middleware('auth')->name('home');
 Route::get('/login', [UserController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/auth', [UserController::class, 'authenticate']);
 route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
@@ -41,4 +41,9 @@ Route::post('/berita/insert/simpan', [BeritaController::class, 'store'])->middle
 
 // website
 Route::get('/', [WebsiteController::class, 'index']);
-Route::get('/detail/{id}', [WebsiteController::class, 'detail']);
+Route::get('/CapaianIndikatorPMKP', [WebsiteController::class, 'CapaianIndikatorPMKP']);
+Route::get('/BeritaKesehatan', [WebsiteController::class, 'BeritaKesehatan']);
+Route::get('/BeritaDetail/{id}', [WebsiteController::class, 'detail']);
+Route::get('/JadwalDokter', [WebsiteController::class, 'JadwalDokter']);
+Route::get('/TataTertibPengunjungDanjamBesuk', [WebsiteController::class, 'TataTertibPengunjungDanjamBesuk']);
+Route::get('/TataTertibPengunjungDanjamBesuk', [WebsiteController::class, 'TataTertibPengunjungDanjamBesuk']);

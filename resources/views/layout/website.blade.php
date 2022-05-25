@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="website/img/favicon.ico" rel="icon">
+    <link href="/website/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +23,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="website/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="website/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/website/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/website/lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="website/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/website/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="website/css/style.css" rel="stylesheet">
+    <link href="/website/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,15 +44,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="/" class="nav-item nav-link">Home</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Informasi</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">Capaian Indikator PMKP</a>
-                            <a href="#" class="dropdown-item">Berita Kesehatan</a>
-                            <a href="#" class="dropdown-item">Jadwal Dokter</a>
-                            <a href="#" class="dropdown-item">Pengumuman</a>
-                            <a href="#" class="dropdown-item">Tata Tertib Pengunjung Dan jam Besuk</a>
+                            <a href="/CapaianIndikatorPMKP" class="dropdown-item">Capaian Indikator PMKP</a>
+                            <a href="/BeritaKesehatan" class="dropdown-item">Berita Kesehatan</a>
+                            <a href="/JadwalDokter" class="dropdown-item">Jadwal Dokter</a>
+                            <a href="/TataTertibPengunjungDanjamBesuk" class="dropdown-item">Tata Tertib Pengunjung Dan
+                                jam Besuk</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
@@ -82,6 +82,43 @@
                 </div>
             </div>
         </nav>
+
+        <!--Carousel Start -->
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="/website/img/dara1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-1" style="max-width: 670px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital
+                                Solution
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="/website/img/dara2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital
+                                Solution
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- Carousel End -->
         @yield('LayoutWebsite')
     </div>
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -126,14 +163,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="website/lib/wow/wow.min.js"></script>
-    <script src="website/lib/easing/easing.min.js"></script>
-    <script src="website/lib/waypoints/waypoints.min.js"></script>
-    <script src="website/lib/counterup/counterup.min.js"></script>
-    <script src="website/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/website/lib/wow/wow.min.js"></script>
+    <script src="/website/lib/easing/easing.min.js"></script>
+    <script src="/website/lib/waypoints/waypoints.min.js"></script>
+    <script src="/website/lib/counterup/counterup.min.js"></script>
+    <script src="/website/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="website/js/main.js"></script>
+    <script src="/website/js/main.js"></script>
 </body>
 
 </html>

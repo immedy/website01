@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\refkategori;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -48,13 +49,14 @@ class BeritaController extends Controller
     {
         $ValidasiBerita = $request->validate([
             'judul' => 'required',
-            'berita' => 'required|',
+            'berita' => 'required',
             'refkategori_id' => 'required',
             'foto' => 'required|image|mimes:jpeg|file|max:2048',
         ]);
         $ValidasiBerita['user_id'] = auth()->user()->id;
         $ValidasiBerita['refruangan_id'] = auth()->user()->refruangan_id;
         $ValidasiBerita['status'] = 1;
+        $ValidasiBerita['exeprt'] = Str::limit(strip_tags($request->berita, 100));
         $ValidasiBerita['foto'] = $request->file('foto')->store('FotoBerita');
         berita::create($ValidasiBerita);
         if ($ValidasiBerita) {
