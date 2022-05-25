@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\berita;
 use App\Models\dokter;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class WebsiteController extends Controller
 {
@@ -15,8 +16,9 @@ class WebsiteController extends Controller
             "berita" => berita::orderBy("created_at", "desc")->get()
         ]);
     }
-    public function detail($id)
+    public function detail(Request $request)
     {
+        $id = Crypt::decryptString($request->filter);
         return view('website.BeritaDetail', [
             'berita' => berita::find($id),
             'posting' => berita::orderBy("created_at", "desc")->paginate(5)
