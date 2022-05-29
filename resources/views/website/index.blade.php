@@ -121,7 +121,7 @@
                         <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                                 style="width: 60px; height: 60px;">
-                                <i class="fa fa-cubes text-white"></i>
+                                <i class="fa fa-globe text-white"></i>
                             </div>
                             <h4>Tempat Strategis</h4>
                             <p class="mb-0">Menjadi rumah sakit rujukan bagi 7 Kecamatan yang ada dihulu mahakam
@@ -130,7 +130,7 @@
                         <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                                 style="width: 60px; height: 60px;">
-                                <i class="fa fa-award text-white"></i>
+                                <i class="fa fa-map text-white"></i>
                             </div>
                             <h4>Jarak Tempuh</h4>
                             <p class="mb-0">Berjarak ± 2 Jam Ke Ibu Kota Kabupaten </p>

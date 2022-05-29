@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('beritas', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
+            $table->string('exeprt');
             $table->text('berita');
             $table->foreignId('user_id');
-            $table->foreignId('ruangan_id');
-            $table->foreignId('kategori_id');
+            $table->foreignId('refruangan_id');
+            $table->foreignId('refkategori_id');
             $table->boolean('status');
             $table->string('foto');
             $table->timestamps();

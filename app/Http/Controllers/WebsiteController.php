@@ -16,10 +16,9 @@ class WebsiteController extends Controller
             "berita" => berita::orderBy("created_at", "desc")->get()
         ]);
     }
-    public function detail(Request $request)
+    public function detail($id)
     {
-        $id = Crypt::decryptString($request->filter);
-        return view('website.BeritaDetail', [
+             return view('website.BeritaDetail', [
             'berita' => berita::find($id),
             'posting' => berita::orderBy("created_at", "desc")->paginate(5)
         ]);

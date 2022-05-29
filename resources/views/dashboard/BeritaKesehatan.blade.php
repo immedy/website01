@@ -11,7 +11,7 @@
                 </a>
             </div>
         </div>
-        <div class="table-responsive text-nowrap">
+        <div class="table text-nowrap">
             <table class="table table-hover">
                 <thead>
                     <tr>
