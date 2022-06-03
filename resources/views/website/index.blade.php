@@ -227,7 +227,8 @@
                                 </div>
                                 <h4 class="mb-3">{{ $p->judul }}</h4>
                                 <p>{{ $p->exeprt }}</p>
-                                <a class="text-uppercase" href="/BeritaDetail/{{ $p->id }}">Read More <i
+                                <a class="text-uppercase"
+                                    href="/BeritaDetail/{{ Crypt::encryptString($p->id) }}">Selengkapnya <i
                                         class="bi bi-arrow-right"></i></a>
                             </div>
                         </div>

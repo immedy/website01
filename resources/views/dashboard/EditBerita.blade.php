@@ -8,12 +8,14 @@
                     <h5 class="mb-0">Berita</h5>
                 </div>
                 <div class="card-body">
-                    <form action="/berita" method="post" enctype="multipart/form-data">
+                    <form action="/berita/{{ $berita->id }}" method="post" enctype="multipart/form-data">
+                        @method('put')
                         @csrf
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Judul</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="judul" name="judul" />
+                                <input type="text" class="form-control" id="judul" name="judul"
+                                    value="{{ $berita->judul }}" />
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -22,7 +24,7 @@
                                 <div class="input-group input-group-merge">
                                     <select class="form-select" id="refkategori_id" name="refkategori_id"
                                         aria-label="Default select example">
-                                        <option selected disabled value="">Silahkan Pilih</option>
+                                        <option selected disabled value="">{{ $berita->refkategori->deskripsi }}</option>
                                         @foreach ($kategori as $p)
                                             <option value="{{ $p->id }}">{{ $p->deskripsi }}</option>
                                         @endforeach
@@ -43,14 +45,14 @@
                             <label class="col-sm-2 col-form-label" for="basic-default-message">Berita</label>
                             <div class="col-sm-10">
                                 <input id="berita" name="berita" class="form-control" type="hidden"
-                                    aria-describedby="basic-icon-default-message2">
+                                    value="{{ $berita->berita }}" aria-describedby="basic-icon-default-message2">
                                 <trix-editor input="berita"></trix-editor>
                             </div>
                         </div>
 
                         <div class=" row justify-content-end">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <button type="submit" class="btn btn-primary">Update Berita</button>
                             </div>
                         </div>
                     </form>

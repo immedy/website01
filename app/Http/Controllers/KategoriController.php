@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\dokter;
-use App\Models\refkategori;
-use App\Models\refruangan;
 use App\Models\refsmf;
+use App\Models\refjabatan;
+use App\Models\refruangan;
+use App\Models\refkategori;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -23,7 +24,8 @@ class KategoriController extends Controller
             "smf" => refsmf::all(),
             "berita" => refkategori::all(),
             "ruangan" => refruangan::all(),
-            "dokter" => dokter::all()
+            "dokter" => dokter::all(),
+            "jabatan" => refjabatan::all()
         ]);
     }
 
@@ -49,7 +51,7 @@ class KategoriController extends Controller
         $refkategori = refkategori::create($ValidasiBerita);
         if ($ValidasiBerita) {
             Alert::toast('Berhasil');
-        return redirect('/kategori');
+            return redirect('/kategori');
         }
     }
 
@@ -62,7 +64,19 @@ class KategoriController extends Controller
         $refruangan = refruangan::create($ValidasiRuangan);
         if ($ValidasiRuangan) {
             Alert::toast('Berhasil');
-        return redirect('/kategori');
+            return redirect('/kategori');
+        }
+    }
+    public function refjabatan(Request $request)
+    {
+        $ValidasiJabatan = $request->validate([
+            'deskripsi' => 'required',
+        ]);
+        $ValidasiJabatan['status'] = 1;
+        $refjabatan = refjabatan::create($ValidasiJabatan);
+        if ($ValidasiJabatan) {
+            Alert::toast('Berhasil');
+            return redirect('/kategori');
         }
     }
 

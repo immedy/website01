@@ -21,7 +21,7 @@
                     <th>Spesialis</th>
                     <th>Residen</th>
                     <th>Status</th>
-                    <th>Actions</th>
+                    <th style="text-align: right">Actions</th>
                 </tr>
             </thead>
             <tbody class="table-border-bottom-0">
@@ -35,18 +35,12 @@
                             <td><span class="badge bg-label-primary me-1">YA</span></td>
                         @endif
                         <td><span class="badge bg-label-primary me-1">Active</span></td>
-                        <td>
-                            <div class="dropdown">
-                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i>
-                                        Edit</a>
-                                    <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i>
-                                        Delete</a>
-                                </div>
-                            </div>
+                        <td style="text-align: right">
+                            <a href="#" class="bx bx-edit btn btn-icon btn-outline-primary" style="left:"></a>
+                            <a href="#" class="bx bx-trash-alt btn btn-icon btn-outline-danger"></a>
+                            <button type="button" class="bx bx-time btn btn-icon btn-outline-success" data-bs-toggle="modal"
+                                data-bs-target="#TambahJadwalModal">
+                            </button>
                         </td>
                     </tr>
                 @endforeach
@@ -98,6 +92,48 @@
                         <label class="form-check-label" for="inlineRadio2">TIDAK</label>
                     </div>
 
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="TambahJadwalModal" data-bs-backdrop="static" tabindex="-1">
+    <div class="modal-dialog">
+        <form class="modal-content" action="/DokterJadwal{id}" method="post">
+            @csrf
+            <div class="modal-header">
+                <h5 class="modal-title" id="backDropModalTitle">Input Jadwal Dokter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="col-md">
+                    <div class="form-check form-check-inline mt-3">
+                        <input class="form-check-input" type="checkbox" id="senin" value="1" />
+                        <label class="form-check-label" for="senin">Senin</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="selasa" value="1" />
+                        <label class="form-check-label" for="selasa">Selasa</label>
+                    </div>
+                    <div class="form-check form-check-inline mt-3">
+                        <input class="form-check-input" type="checkbox" id="rabu" value="1" />
+                        <label class="form-check-label" for="rabu">Rabu</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="kamis" value="1" />
+                        <label class="form-check-label" for="kamis">Kamis</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="jumat" value="1" />
+                        <label class="form-check-label" for="jumat">Jumat</label>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

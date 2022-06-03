@@ -111,45 +111,29 @@
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
                     <li class="menu-item">
-                        <a href="/admin" class="menu-link">
+                        <a href="/home" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
                     </li>
-
                     <!-- Layouts -->
                     <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <a href="/berita" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
                             <div data-i18n="Layouts">Berita</div>
                         </a>
-
-                        <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a href="layouts-without-menu.html" class="menu-link">
-                                    <div data-i18n="Without menu">PMKP</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="/berita" class="menu-link">
-                                    <div data-i18n="Without navbar">Berita Kesehatan</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="layouts-container.html" class="menu-link">
-                                    <div data-i18n="Container">Pengumuman</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="layouts-fluid.html" class="menu-link">
-                                    <div data-i18n="Fluid">Tata Tertib</div>
-                                </a>
-                            </li>
-                        </ul>
+                        <a href="/IndikatorMutu" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-clipboard"></i>
+                            <div data-i18n="Layouts">Indikator Mutu</div>
+                        </a>
                     <li class="menu-item">
                         <a href="/dokter" class="menu-link">
                             <i class="bx bx-user-voice me-2"></i>
                             <div data-i18n="Analytics">Input Dokter</div>
+                        </a>
+                        <a href="/jabatan" class="menu-link">
+                            <i class="bx bx-street-view me-2"></i>
+                            <div data-i18n="Analytics">Input Jabatan</div>
                         </a>
                     </li>
                     </li>

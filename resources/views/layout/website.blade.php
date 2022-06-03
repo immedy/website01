@@ -36,7 +36,7 @@
 <body>
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <a href="/" class="navbar-brand p-0">
                 <h1 class="m-0"><i class="fas fa-clinic-medical"></i>RSUD Dayaku Raja</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -58,15 +58,15 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Profil</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">Visi Dan Misi</a>
-                            <a href="#" class="dropdown-item">Sejarah</a>
-                            <a href="#" class="dropdown-item">Strukrur Organisasi</a>
+                            <a href="/VisiDanMisi" class="dropdown-item">Visi Dan Misi</a>
+                            <a href="/Sejarah" class="dropdown-item">Sejarah</a>
+                            <a href="/StrukturOrganisasi" class="dropdown-item">Strukrur Organisasi</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Fasilitas</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item">Instalasi Gawat Darurat</a>
+                            <a href="" class="dropdown-item">Instalasi Gawat Darurat</a>
                             <a href="#" class="dropdown-item">Instalasi Rawat Inap</a>
                             <a href="#" class="dropdown-item">Instalasi Rawat Jalan</a>
                             <a href="#" class="dropdown-item">Instalasi Laboratorium</a>
@@ -90,9 +90,8 @@
                     <img class="w-100" src="/website/img/dara1.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-1" style="max-width: 670px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital
-                                Solution
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown"></h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">
                             </h1>
                         </div>
                     </div>
@@ -101,9 +100,8 @@
                     <img class="w-100" src="/website/img/dara2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Creative & Innovative Digital
-                                Solution
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown"></h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">
                             </h1>
                         </div>
                     </div>

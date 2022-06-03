@@ -11,34 +11,42 @@
                 </a>
             </div>
         </div>
-        <div class="table text-nowrap">
-            <table class="table table-hover">
+        <div class="table-responsive">
+            <table class="align-middle mb-0 table table-borderless table-striped table-hover">
                 <thead>
                     <tr>
                         <th scope="col">No</th>
-                        <th>Judul</th>
-                        <th>kategori</th>
+                        <th style="width: 40%">Judul</th>
+                        <th style="width: 20%">kategori</th>
                         <th>Ruangan</th>
                         <th>Status</th>
-                        <th>Detail</th>
+                        <th style="text-align: right">Detail</th>
 
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
-                    @foreach ($berita as $p)
+                    @foreach ($berita as $berita)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td><i class="fab fa-angular fa-lg text-danger me"></i><strong>{{ $p->judul }}</strong>
+                            <td scope="col">{{ $loop->iteration }}</td>
+                            <td><i class="fab fa-angular fa-lg text-danger me"></i><strong>{{ $berita->judul }}</strong>
                             </td>
-                            <td>{{ $p->refkategori->deskripsi }}</td>
-                            <td>{{ $p->refruangan->deskripsi }}</td>
-                            @if ($p->status == 1)
+                            <td>{{ $berita->refkategori->deskripsi }}</td>
+                            <td>{{ $berita->refruangan->deskripsi }}</td>
+                            @if ($berita->status == 1)
                                 <td><span class="badge bg-label-success me-1">Aktif</span></td>
                             @else
                                 <td><span class="badge bg-label-warning me-1">NonAktif</span></td>
                             @endif
-                            <td>
+                            <td style="text-align: right">
+                                <a href="/berita/{{ $berita->id }}/edit"
+                                    class="bx bx-edit btn btn-icon btn-outline-primary"></a>
+                                <form action="/berita/{{ $berita->id }}" method="post" class="d-inline">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="bx bx-trash-alt btn btn-icon btn-outline-danger"
+                                        onclick="return confirm ('Apakah Anda Yakin Menghapus Berita Ini ?')"> </button>
 
+                                </form>
                             </td>
                         </tr>
                     @endforeach

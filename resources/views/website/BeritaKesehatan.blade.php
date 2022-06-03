@@ -23,7 +23,8 @@
                                         </div>
                                         <h4 class="mb-3">{{ $p->judul }}</h4>
                                         <p>{{ $p->exeprt }}</p>
-                                        <a class="text-uppercase" href="/BeritaDetail/{{ $p->id }}">Baca Selengkapnya
+                                        <a class="text-uppercase"
+                                            href="/BeritaDetail/{{ Crypt::encryptString($p->id) }}">Baca Selengkapnya
                                             <i class="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>

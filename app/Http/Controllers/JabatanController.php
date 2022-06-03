@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dokter;
-use App\Models\refruangan;
-use App\Models\refsmf;
+use App\Models\jabatan;
+use App\Models\refjabatan;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class DokterController extends Controller
+class JabatanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +16,9 @@ class DokterController extends Controller
      */
     public function index()
     {
-        return view('dashboard.dokter', [
-            "Dokter" => dokter::all(),
-            "smf" => refsmf::all()
+        return view('dashboard.Jabatan', [
+            'jabatan' => jabatan::all(),
+            'refjabatan' => refjabatan::all()
         ]);
     }
 
@@ -30,21 +29,28 @@ class DokterController extends Controller
      */
     public function create()
     {
+        //
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        $ValidasiDokter = $request->validate([
+        $ValidasiJabatan = $request->validate([
             'nama' => 'required',
-            'refsmf_id' => 'required',
-            'foto' => 'required|image|mimes:jpeg|file|max:2048',
-            'residen' => 'required'
+            'refjabatan_id' => 'required|unique:jabatans,refjabatan_id',
+            'foto' => 'required|image|mimes:jpeg|file|max:512',
         ]);
-        $ValidasiDokter['status'] = 1;
-        $ValidasiDokter['foto'] = $request->file('foto')->store('FotoDokter');
-        dokter::create($ValidasiDokter);
-        if ($ValidasiDokter) {
-            Alert::toast('Berhasil Menambahkan Berita');
-            return redirect('/dokter');
+        $ValidasiJabatan['status'] = 1;
+        $ValidasiJabatan['foto'] = $request->file('foto')->store('FotoPejabat');
+        jabatan::create($ValidasiJabatan);
+        if ($ValidasiJabatan) {
+            Alert::toast('Berhasil Menambahkan Pejabat');
+            return redirect('/jabatan');
         }
     }
 

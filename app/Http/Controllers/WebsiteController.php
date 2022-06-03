@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\berita;
 use App\Models\dokter;
+use App\Models\jabatan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
@@ -18,10 +19,14 @@ class WebsiteController extends Controller
     }
     public function detail($id)
     {
-             return view('website.BeritaDetail', [
-            'berita' => berita::find($id),
-            'posting' => berita::orderBy("created_at", "desc")->paginate(5)
-        ]);
+        $EnskripsiID = Crypt::decryptString($id);
+        return view(
+            'website.BeritaDetail',
+            [
+                'berita' => berita::findOrfail($EnskripsiID),
+                'posting' => berita::orderBy("created_at", "desc")->paginate(5)
+            ]
+        );
     }
     public function BeritaKesehatan()
     {
@@ -40,5 +45,19 @@ class WebsiteController extends Controller
     public function TataTertibPengunjungDanjamBesuk()
     {
         return view('website.JadwalDokter');
+    }
+    public function VisiDanMisi()
+    {
+        return view('website.visimisi');
+    }
+    public function Sejarah()
+    {
+        return view('website.sejarah');
+    }
+    public function StrukturOrganisasi()
+    {
+        return view('website.StrukturOrganisasi', [
+            'jabatan' => jabatan::all()
+        ]);
     }
 }

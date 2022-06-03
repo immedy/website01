@@ -35,7 +35,7 @@
                             <div class="d-flex rounded overflow-hidden mb-3">
                                 <img class="img-fluid" src="{{ asset('storage/' . $post->foto) }}"
                                     style="width: 100px; height: 100px; object-fit: cover;" alt="">
-                                <a href="/BeritaDetail/{{ $post->id }}"
+                                <a href="/BeritaDetail/{{ Crypt::encryptString($post->id) }}"
                                     class="h5 fw-semi-bold d-flex align-items-center bg-light px-3 mb-0">{{ $post->judul }}
                                 </a>
                             </div>

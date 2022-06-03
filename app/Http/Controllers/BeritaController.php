@@ -7,6 +7,7 @@ use App\Models\refkategori;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Storage;
 
 class BeritaController extends Controller
 {
@@ -83,7 +84,10 @@ class BeritaController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('dashboard.EditBerita', [
+            'berita' => berita::find($id),
+            'kategori' => refkategori::all()
+        ]);
     }
 
     /**
@@ -95,7 +99,20 @@ class BeritaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ValidasiBerita = $request->validate([
+            'judul' => 'required',
+            'berita' => 'required',
+            'refkategori_id' => 'required',
+            'foto' => 'required|image|mimes:jpeg|file|max:2048',
+        ]);
+        $ValidasiBerita['exeprt'] = Str::limit(strip_tags($request->berita, 100));
+        $ValidasiBerita['foto'] = $request->file('foto')->store('FotoBerita');
+        berita::where('id', $id)
+            ->update($ValidasiBerita);
+        if ($ValidasiBerita) {
+            Alert::toast('Berhasil Update Berita');
+            return redirect('/berita');
+        }
     }
 
     /**
@@ -106,6 +123,11 @@ class BeritaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $berita = berita::find($id);
+        $berita->delete();
+        if ($berita) {
+            Alert::toast('Berhasil menghapus Berita');
+            return redirect('/berita');
+        }
     }
 }
