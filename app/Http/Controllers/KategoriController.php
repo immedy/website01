@@ -7,6 +7,7 @@ use App\Models\refsmf;
 use App\Models\refjabatan;
 use App\Models\refruangan;
 use App\Models\refkategori;
+use App\Models\refpoliklinik;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -25,7 +26,8 @@ class KategoriController extends Controller
             "berita" => refkategori::all(),
             "ruangan" => refruangan::all(),
             "dokter" => dokter::all(),
-            "jabatan" => refjabatan::all()
+            "jabatan" => refjabatan::all(),
+            "poliklinik" =>refpoliklinik::all()
         ]);
     }
 
@@ -75,6 +77,18 @@ class KategoriController extends Controller
         $ValidasiJabatan['status'] = 1;
         $refjabatan = refjabatan::create($ValidasiJabatan);
         if ($ValidasiJabatan) {
+            Alert::toast('Berhasil');
+            return redirect('/kategori');
+        }
+    }
+    public function refpoliklinik(Request $request)
+    {
+        $ValidasiPoliklinik = $request->validate([
+            'deskripsi' => 'required',
+        ]);
+        $ValidasiPoliklinik['status'] = 1;
+        $refpoliklinik = refpoliklinik::create($ValidasiPoliklinik);
+        if ($ValidasiPoliklinik) {
             Alert::toast('Berhasil');
             return redirect('/kategori');
         }

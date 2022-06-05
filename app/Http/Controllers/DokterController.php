@@ -18,7 +18,7 @@ class DokterController extends Controller
     public function index()
     {
         return view('dashboard.dokter', [
-            "Dokter" => dokter::all(),
+            "dokter" => dokter::all(),
             "smf" => refsmf::all()
         ]);
     }
@@ -37,7 +37,12 @@ class DokterController extends Controller
             'nama' => 'required',
             'refsmf_id' => 'required',
             'foto' => 'required|image|mimes:jpeg|file|max:2048',
-            'residen' => 'required'
+            'residen' => 'required',
+            'senin' => 'nullable',
+            'selasa' => 'nullable',
+            'rabu' => 'nullable',
+            'kamis' => 'nullable',
+            'jumat' => 'nullable'
         ]);
         $ValidasiDokter['status'] = 1;
         $ValidasiDokter['foto'] = $request->file('foto')->store('FotoDokter');
@@ -56,7 +61,9 @@ class DokterController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('dashboard.Jadwaldokter',[
+            'dokter' => dokter::findOrfail($id)
+        ]);
     }
 
     /**

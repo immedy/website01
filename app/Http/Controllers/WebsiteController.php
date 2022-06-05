@@ -40,7 +40,10 @@ class WebsiteController extends Controller
     }
     public function JadwalDokter()
     {
-        return view('website.JadwalDokter');
+        return view('website.JadwalDokter',[
+            "DokterSpesialis" => dokter::Where("residen","=","0")->get(),
+            "DokterResiden" => dokter::Where("residen","=","1")->get()
+        ]);
     }
     public function TataTertibPengunjungDanjamBesuk()
     {

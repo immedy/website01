@@ -6,6 +6,7 @@ use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebsiteController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +29,8 @@ Route::get('/pegawai', [UserController::class, 'index'])->middleware('auth');
 Route::post('/PegawaiInsert', [UserController::class, 'store'])->middleware('auth');
 
 Route::get('/dokter', [DokterController::class, 'index'])->middleware('auth');
-route::post('/DokterInsert', [DokterController::class, 'store'])->middleware('auth');
+Route::post('/DokterInsert', [DokterController::class, 'store'])->middleware('auth');
+Route::resource('/dokter', DokterController::class)->middleware('auth');
 
 Route::get('/jabatan', [JabatanController::class, 'index'])->middleware('auth');
 Route::post('/InsertJabatan', [JabatanController::class, 'store'])->middleware('auth');
@@ -38,6 +40,7 @@ Route::post('/kategorismf', [KategoriController::class, 'refsmf'])->middleware('
 Route::post('/kategoriberita', [KategoriController::class, 'refberita'])->middleware('auth');
 Route::post('/kategoriruangan', [KategoriController::class, 'refruangan'])->middleware('auth');
 Route::post('/kategorijabatan', [KategoriController::class, 'refjabatan'])->middleware('auth');
+Route::post('/kategoripoliklinik',[KategoriController::class, 'refpoliklinik'])->middleware('auth');
 
 
 Route::get('/berita/insert', [BeritaController::class, 'insert'])->middleware('auth');

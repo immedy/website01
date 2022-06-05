@@ -19,6 +19,11 @@ return new class extends Migration
             $table->foreignId('refsmf_id');
             $table->string('foto');
             $table->boolean('residen');
+            $table->boolean('senin')->nullable();
+            $table->boolean('selasa')->nullable();
+            $table->boolean('rabu')->nullable();
+            $table->boolean('kamis')->nullable();
+            $table->boolean('jumat')->nullable();
             $table->boolean('status');
             $table->timestamps();
         });

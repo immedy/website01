@@ -36,7 +36,7 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             Alert::toast('Selamat Datang ', 'success');
-            return redirect()->intended('/admin');
+            return redirect()->intended('/home');
         }
         Alert::Toast('Username Dan Password Tidak Sama', 'error');
         return back();
