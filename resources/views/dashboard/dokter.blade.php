@@ -1,6 +1,6 @@
 @extends('layout.admin')
 @section('dashboard')
-    <div class="card" >
+    <div class="card">
         <div class="card-header d-flex align-items-center justify-content-between pb-0 ">
             <div>
                 <h5>Dokter</h5>
@@ -41,12 +41,13 @@
                             <td><span class="badge bg-label-success me-1">Aktif</span></td>
                         @endif
                         <td style="text-align: center">
-                            <a href="/dokter/{{ $p->id }}" type="button" class="bx bx-time btn btn-icon btn-outline-success" ></a>
+                            <a href="/dokter/{{ $p->id }}" type="button"
+                                class="bx bx-time btn btn-icon btn-outline-success"></a>
                         </td>
                         <td style="text-align: right">
                             <a href="#" class="bx bx-edit btn btn-icon btn-outline-primary" style="left:"></a>
                             <a href="#" class="bx bx-trash-alt btn btn-icon btn-outline-danger"></a>
-                            
+
                         </td>
                     </tr>
                 @endforeach
@@ -81,6 +82,17 @@
                         </select>
                     </div>
                 </div>
+                <div class="row g-2 mb-2">
+                    <div class="col mb-0">
+                        <label for="dobBackdrop" class="form-label">Pilih Poliklinik</label>
+                        <select class="form-control" id="refpoliklinik_id" name="refpoliklinik_id">
+                            <option selected disabled value="">Silahkan Pilih</option>
+                            @foreach ($poliklinik as $p)
+                                <option value="{{ $p->id }}">{{ $p->deskripsi }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
                 <div class="row ">
                     <div class="col mb-3">
                         <label for="formFile" class="form-label">Upload Foto Dokter [JPEG, Max 2MB]</label>
@@ -102,27 +114,32 @@
                     <label class="">Jadwal Dokter</label>
                     <div>
                         <div class="form-check form-check-inline mt-3">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="senin" id="senin" value="1" />
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="senin" id="senin"
+                                value="1" />
                             <label class="form-check-label" for="inlineCheckbox1">Senin</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="selasa" id="selasa" value="1" />
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="selasa"
+                                id="selasa" value="1" />
                             <label class="form-check-label" for="inlineCheckbox2">Selasa</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="rabu" id="rabu" value="1" />
-                              <label class="form-check-label" for="inlineCheckbox2">Rabu</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="kamis" id="kamis" value="1" />
-                              <label class="form-check-label" for="inlineCheckbox2">Kamis</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="checkbox" id="inlineCheckbox2"  name="jumat" id="jumat" value="1" />
-                              <label class="form-check-label" for="inlineCheckbox2">Jumat</label>
-                            </div>                   
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="rabu" id="rabu"
+                                value="1" />
+                            <label class="form-check-label" for="inlineCheckbox2">Rabu</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="kamis" id="kamis"
+                                value="1" />
+                            <label class="form-check-label" for="inlineCheckbox2">Kamis</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="jumat" id="jumat"
+                                value="1" />
+                            <label class="form-check-label" for="inlineCheckbox2">Jumat</label>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">

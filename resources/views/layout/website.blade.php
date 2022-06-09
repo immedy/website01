@@ -66,14 +66,14 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Fasilitas</a>
                         <div class="dropdown-menu m-0">
-                            <a href="" class="dropdown-item">Instalasi Gawat Darurat</a>
-                            <a href="#" class="dropdown-item">Instalasi Rawat Inap</a>
-                            <a href="#" class="dropdown-item">Instalasi Rawat Jalan</a>
-                            <a href="#" class="dropdown-item">Instalasi Laboratorium</a>
-                            <a href="#" class="dropdown-item">Instalasi Radiologi</a>
-                            <a href="#" class="dropdown-item">Instalasi Farmasi</a>
-                            <a href="#" class="dropdown-item">Intensive Care Unit</a>
-                            <a href="#" class="dropdown-item">Instalasi Penunjang Non Medik</a>
+                            <a href="/InstalasiRawatdarurat" class="dropdown-item">Instalasi Gawat Darurat</a>
+                            <a href="/InstalasiRawatInap" class="dropdown-item">Instalasi Rawat Inap</a>
+                            <a href="/InstalasiRawatJalan" class="dropdown-item">Instalasi Rawat Jalan</a>
+                            <a href="/InstalasiLab" class="dropdown-item">Instalasi Laboratorium</a>
+                            <a href="InstalasiRadiologi" class="dropdown-item">Instalasi Radiologi</a>
+                            <a href="/InstalasiFarmasi" class="dropdown-item">Instalasi Farmasi</a>
+                            <a href="/InstalasiCareUnit" class="dropdown-item">Intensive Care Unit</a>
+                            <a href="/InstalasiNonMedik" class="dropdown-item">Instalasi Penunjang Non Medik</a>
                         </div>
                     </div>
 

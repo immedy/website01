@@ -20,4 +20,8 @@ class dokter extends Model
     {
         return $this->belongsTo(refruangan::class);
     }
+    public function refpoliklinik()
+    {
+        return $this->belongsTo(refpoliklinik::class);
+    }
 }

@@ -2,14 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dokter;
-use App\Models\refpoliklinik;
-use App\Models\refruangan;
-use App\Models\refsmf;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
 
-class DokterController extends Controller
+class IndikatorMutuCOntroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,11 +13,7 @@ class DokterController extends Controller
      */
     public function index()
     {
-        return view('dashboard.dokter', [
-            "dokter" => dokter::all(),
-            "smf" => refsmf::all(),
-            "poliklinik" => refpoliklinik::where("status", "=", "1")->get()
-        ]);
+        return view('dashboard.IndikatorMutu');
     }
 
     /**
@@ -32,28 +23,18 @@ class DokterController extends Controller
      */
     public function create()
     {
+        //
     }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        $ValidasiDokter = $request->validate([
-            'nama' => 'required',
-            'refsmf_id' => 'required',
-            'foto' => 'required|image|mimes:jpeg|file|max:2048',
-            'residen' => 'required',
-            'refpoliklinik_id' => 'nullable',
-            'senin' => 'nullable',
-            'selasa' => 'nullable',
-            'rabu' => 'nullable',
-            'kamis' => 'nullable',
-            'jumat' => 'nullable'
-        ]);
-        $ValidasiDokter['status'] = 1;
-        $ValidasiDokter['foto'] = $request->file('foto')->store('FotoDokter');
-        dokter::create($ValidasiDokter);
-        if ($ValidasiDokter) {
-            Alert::toast('Berhasil Menambahkan Berita');
-            return redirect('/dokter');
-        }
+        //
     }
 
     /**
@@ -64,9 +45,7 @@ class DokterController extends Controller
      */
     public function show($id)
     {
-        return view('dashboard.Jadwaldokter', [
-            'dokter' => dokter::findOrfail($id)
-        ]);
+        //
     }
 
     /**

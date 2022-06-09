@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\IndikatorMutuCOntroller;
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebsiteController;
 use GuzzleHttp\Middleware;
@@ -20,7 +22,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 // Dashboard
-Route::get('/home', [UserController::class, 'home'])->middleware('auth')->name('home');
+Route::resource('/Menu', MenuController::class)->middleware('auth');
+
+
 Route::get('/login', [UserController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/auth', [UserController::class, 'authenticate']);
 route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
@@ -35,16 +39,18 @@ Route::resource('/dokter', DokterController::class)->middleware('auth');
 Route::get('/jabatan', [JabatanController::class, 'index'])->middleware('auth');
 Route::post('/InsertJabatan', [JabatanController::class, 'store'])->middleware('auth');
 
-Route::get('/kategori', [KategoriController::class, 'index'])->middleware('auth');
+Route::get('/kategori', [KategoriController::class, 'index']);
 Route::post('/kategorismf', [KategoriController::class, 'refsmf'])->middleware('auth');
 Route::post('/kategoriberita', [KategoriController::class, 'refberita'])->middleware('auth');
 Route::post('/kategoriruangan', [KategoriController::class, 'refruangan'])->middleware('auth');
 Route::post('/kategorijabatan', [KategoriController::class, 'refjabatan'])->middleware('auth');
-Route::post('/kategoripoliklinik',[KategoriController::class, 'refpoliklinik'])->middleware('auth');
+Route::post('/kategoripoliklinik', [KategoriController::class, 'refpoliklinik'])->middleware('auth');
 
 
 Route::get('/berita/insert', [BeritaController::class, 'insert'])->middleware('auth');
 Route::resource('/berita', BeritaController::class)->middleware('auth');
+
+Route::resource('IndikatorMutu', IndikatorMutuCOntroller::class)->middleware('auth');
 
 
 // website
@@ -57,3 +63,11 @@ Route::get('/TataTertibPengunjungDanjamBesuk', [WebsiteController::class, 'TataT
 Route::get('/VisiDanMisi', [WebsiteController::class, 'VisiDanMisi']);
 Route::get('/Sejarah', [WebsiteController::class, 'Sejarah']);
 Route::get('/StrukturOrganisasi', [WebsiteController::class, 'StrukturOrganisasi']);
+Route::get('/InstalasiRawatJalan', [WebsiteController::class, 'InstalasiRawatJalan']);
+Route::get('/InstalasiRawatdarurat', [WebsiteController::class, 'InstalasiRawatdarurat']);
+Route::get('/InstalasiRawatInap', [WebsiteController::class, 'InstalasiRawatInap']);
+Route::get('/InstalasiLab', [WebsiteController::class, 'InstalasiLab']);
+Route::get('/InstalasiRadiologi', [WebsiteController::class, 'InstalasiRadiologi']);
+Route::get('/InstalasiFarmasi', [WebsiteController::class, 'InstalasiFarmasi']);
+Route::get('/InstalasiCareUnit', [WebsiteController::class, 'InstalasiCareUnit']);
+Route::get('/InstalasiNonMedik', [WebsiteController::class, 'InstalasiNonMedik']);

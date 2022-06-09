@@ -17,7 +17,6 @@ class UserController extends Controller
      */
     public function home()
     {
-        return view('dashboard.home');
     }
     public function index()
     {
@@ -36,7 +35,7 @@ class UserController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             Alert::toast('Selamat Datang ', 'success');
-            return redirect()->intended('/home');
+            return redirect()->intended('/Menu');
         }
         Alert::Toast('Username Dan Password Tidak Sama', 'error');
         return back();

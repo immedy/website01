@@ -111,7 +111,7 @@
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
                     <li class="menu-item">
-                        <a href="/home" class="menu-link">
+                        <a href="/Menu" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-home-circle"></i>
                             <div data-i18n="Analytics">Dashboard</div>
                         </a>
@@ -159,8 +159,8 @@
                     <li class="menu-item">
                         <form action="/logout" method="post">
                             @csrf
-                            <button href="" class="menu-link btn rounded-pill btn-outline-secondary" type="submit">
-                                <i class="bx bx-power-off me-2"></i>
+                            <button class="menu-link btn-sm btn-outline-danger " type="submit">
+                                <i class="bx bx-log-out-circle"></i>
                                 <div data-i18n="Analytics">Logout</div>
                             </button>
                         </form>
@@ -207,6 +207,8 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script type="text/javascript" src="/admin/assets/css/trix.js"></script>
+
+
     @include('sweetalert::alert')
 </body>
 

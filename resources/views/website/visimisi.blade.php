@@ -12,7 +12,7 @@
                         <div class="border-bottom py-4 px-5 mb-4">
                             <h4 class="text-primary mb-1">Visi Rumah Sakit Dayaku Raja</h4>
                         </div>
-                        <div class="p-5 pt-0" style="height: 400px">
+                        <div class="p-5 pt-0" style="height: 480px">
                             <div class="d-flex justify-content-between mb-3"><span>“Terwujudnya pelayanan rumah sakit yang
                                     berkualitas dan berkeadilan demi terciptanya kepuasan masyarakat</span></div>
                         </div>
@@ -24,7 +24,7 @@
                             <h4 class="text-primary mb-1">Misi Rumah Sakit Dayaku Raja</h4>
 
                         </div>
-                        <div class="p-5 pt-0" style="height: 400px">
+                        <div class="p-5 pt-0" style="height: 480px">
                             <div class="d-flex justify-content-between mb-3">1. <span>Menyelenggarakan pelayanan Rumah Sakit
                                     yang berkualitas secara profesional
                                 </span></div>
@@ -42,12 +42,22 @@
                         <div class="border-bottom py-4 px-5 mb-4">
                             <h4 class="text-primary mb-1">Falsafah / Nilai Rumah Sakit Dayaku Raja</h4>
                         </div>
-                        <div class="p-5 pt-0" style="height: 400px">
-                            <div class="justify-content-between mb-3">1. <span>Kebersamaan</span></div>
-                            <div class="justify-content-between mb-3">2. <span>Empati</span></div>
-                            <div class="justify-content-between mb-3">3. <span>Menghormati Dan Mengahargai</span></div>
-                            <div class="justify-content-between mb-3">4. <span>Responsif</span></div>
-                            <div class="justify-content-between mb-3">5. <span>Etika</span></div>
+                        <div class="p-5 pt-0" style="height: 480px">
+                            <div class="d-flex justify-content-between mb-3">1. <span>Kebersamaan <p>Bekerjasama untuk
+                                        memajukan rumah sakit</p>
+                                </span></div>
+                            <div class="d-flex justify-content-between mb-3">2. <span>Empati <p>Memahami apa yang dirasakan
+                                        dan apa yang dibutuhkan oleh pasien.</p>
+                                </span></div>
+                            <div class="d-flex justify-content-between mb-3">3. <span>3.Menghormati dan Menghargai <p>Adanya
+                                        landasan dalam berprilaku antar sesama</p>
+                                </span></div>
+                            <div class="d-flex justify-content-between mb-3">4. <span>Responsif <p>Kecepatan memberikan
+                                        solusi dalam menanggapi suatu masalah</p>
+                                </span></div>
+                            <div class="d-flex justify-content-between mb-3">5. <span>5.Etika <p>Bermoral tinggi tanpa
+                                        diskriminasi</p>
+                                </span></div>
                         </div>
                     </div>
                 </div>

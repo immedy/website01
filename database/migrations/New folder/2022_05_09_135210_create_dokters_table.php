@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignId('refsmf_id');
             $table->string('foto');
             $table->boolean('residen');
+            $table->foreignId('refpoliklinik_id')->nullable();
             $table->boolean('senin')->nullable();
             $table->boolean('selasa')->nullable();
             $table->boolean('rabu')->nullable();
