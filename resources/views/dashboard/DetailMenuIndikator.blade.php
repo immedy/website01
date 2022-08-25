@@ -12,9 +12,10 @@
           </tr>
         </thead>
         <tbody class="table-border-bottom-0">
+          @foreach ( $menu as $p )
           <tr>
-            <td>1</td>
-            <td>Albert Cook</td>
+            <td>{{ $loop->iteration }}</td>
+            <td>{{ $p->refindikator->deskripsi}}</td>
            <td>
             <div class="container">
               <div class="row">
@@ -74,9 +75,16 @@
             </div>
            </td>
           </tr>
+          @endforeach
           
         </tbody>
       </table>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            Close
+        </button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+    </div>
     </div>
   </div>
 

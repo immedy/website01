@@ -53,7 +53,7 @@ Route::get('/berita/insert', [BeritaController::class, 'insert'])->middleware('a
 Route::resource('/berita', BeritaController::class)->middleware('auth');
 
 Route::resource('/IndikatorMutu', IndikatorMutuController::class)->middleware('auth');
-route::resource('/IndikatorMutu/detail', IndikatorDetailController::class)->middleware('auth');
+route::resource('/IndikatorMutuDetail', IndikatorDetailController::class)->middleware('auth');
 
 
 // website

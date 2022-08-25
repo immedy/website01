@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\refjudulindikator;
+
 use Illuminate\Http\Request;
+use App\Models\Menuindikator;
+
 
 class IndikatorDetailController extends Controller
 {
@@ -14,8 +16,8 @@ class IndikatorDetailController extends Controller
      */
     public function index()
     {
-        return view('dashboard.DetailMenuIndikator',[
-            'judulinidikator' => refjudulindikator::all()
+        return view('dashboard.DetailMenuIndikator', [
+            'menu' => Menuindikator::all()
         ]);
     }
 
