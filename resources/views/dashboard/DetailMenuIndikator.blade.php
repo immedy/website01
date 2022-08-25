@@ -8,37 +8,71 @@
           <tr>
             <th>No</th>
             <th>Judul Indikator</th>
-            <th>1</th>
-            <th>2</th>
-            <th>3</th>
-            <th>4</th>
-            <th>5</th>
-            <th>6</th>
-            <th>7</th>
-            <th>8</th>
-            <th>9</th>
-            <th>10</th>
-            <th>11</th>
-            <th>12</th>
-            <th>Actions</th>
+            <th>Bulan</th> 
           </tr>
         </thead>
         <tbody class="table-border-bottom-0">
           <tr>
             <td>1</td>
             <td>Albert Cook</td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
-            <td ><input class="form-control form-control-sm" type="text"/></td>
+           <td>
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <label for="smallInput" class="form-label">Januari</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">Februari</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">Maret</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">April</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="smallInput" class="form-label">Mei</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">Juni</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">Juli</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">Agustsus</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <label for="smallInput" class="form-label">September</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">Oktober</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">November</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+                <div class="col">
+                  <label for="smallInput" class="form-label">Desember</label>
+                  <input id="smallInput"class="form-control form-control-sm" type="number" />
+                </div>
+              </div>
+            </div>
+           </td>
           </tr>
           
         </tbody>
