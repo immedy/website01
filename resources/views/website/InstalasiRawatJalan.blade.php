@@ -2,7 +2,7 @@
 @section('LayoutWebsite')
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class=" section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-            <h1 class="mb-0">INSTALASI RAWAT INAP</h1>
+            <h1 class="mb-0">INSTALASI RAWAT JALAN</h1>
         </div>
         @foreach ($webrawatjalan as $p)
             <div class="row mb-5">

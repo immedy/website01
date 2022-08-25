@@ -124,7 +124,7 @@ class BeritaController extends Controller
     public function destroy($id)
     {
         $berita = berita::find($id);
-        $berita->delete();
+        $berita->delete()->storage();
         if ($berita) {
             Alert::toast('Berhasil menghapus Berita');
             return redirect('/berita');

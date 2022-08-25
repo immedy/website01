@@ -100,6 +100,11 @@ class DokterController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $p = dokter::find($id);
+        $p->delete();
+        if ($p) {
+            Alert::toast('Berhasil Menghapus Dokter');
+            return redirect('/dokter');
+        }
     }
 }

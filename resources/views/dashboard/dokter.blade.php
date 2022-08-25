@@ -45,8 +45,14 @@
                                 class="bx bx-time btn btn-icon btn-outline-success"></a>
                         </td>
                         <td style="text-align: right">
-                            <a href="#" class="bx bx-edit btn btn-icon btn-outline-primary" style="left:"></a>
-                            <a href="#" class="bx bx-trash-alt btn btn-icon btn-outline-danger"></a>
+
+                            <form action="/dokter/{{ $p->id }}" method="post" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button class="bx bx-trash-alt btn btn-icon btn-outline-danger"
+                                    onclick="return confirm ('Apakaha Anda Yakin Menghapus Dokter Ini ?')">
+                            </form>
+
 
                         </td>
                     </tr>
@@ -58,7 +64,7 @@
 
 <div class="modal fade" id="TambahDokterModal" data-bs-backdrop="static" tabindex="-1">
     <div class="modal-dialog">
-        <form class="modal-content" action="/DokterInsert" method="post" enctype="multipart/form-data">
+        <form class="modal-content" action="/dokter" method="post" enctype="multipart/form-data">
             @csrf
             <div class="modal-header">
                 <h5 class="modal-title" id="backDropModalTitle">Tambah Pengguna</h5>

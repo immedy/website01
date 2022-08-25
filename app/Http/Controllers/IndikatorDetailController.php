@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Menu;
-use App\Models\menuinsert;
-use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\refjudulindikator;
 use Illuminate\Http\Request;
 
-class MenuController extends Controller
+class IndikatorDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view('dashboard.home', [
-            'Menu' => Menu::all(),
-            "dashboard" => menuinsert::orderBy('menu_id', 'asc')->get()
+        return view('dashboard.DetailMenuIndikator',[
+            'judulinidikator' => refjudulindikator::all()
         ]);
     }
 
@@ -29,6 +26,7 @@ class MenuController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
@@ -39,19 +37,7 @@ class MenuController extends Controller
      */
     public function store(Request $request)
     {
-        $ValidasiMenuWebsite = $request->validate([
-            'menu_id' => 'required',
-            'index' => 'required',
-            'isi' => 'required',
-            'foto' => 'required|image|mimes:jpeg|file|max:2048',
-        ]);
-        $ValidasiMenuWebsite['status'] = 1;
-        $ValidasiMenuWebsite['foto'] = $request->file('foto')->store('FotoInstalasi');
-        menuinsert::create($ValidasiMenuWebsite);
-        if ($ValidasiMenuWebsite) {
-            Alert::toast('Berhasil ');
-            return redirect('/Menu');
-        }
+        //
     }
 
     /**
@@ -62,6 +48,7 @@ class MenuController extends Controller
      */
     public function show($id)
     {
+        //
     }
 
     /**
@@ -72,10 +59,7 @@ class MenuController extends Controller
      */
     public function edit($id)
     {
-        return view('dashboard.EditMenu', [
-            'Menu' => Menu::all(),
-            'MenuInsert' => menuinsert::find($id)
-        ]);
+        //
     }
 
     /**
@@ -98,11 +82,6 @@ class MenuController extends Controller
      */
     public function destroy($id)
     {
-        $p = menuinsert::find($id);
-        $p->delete();
-        if ($p) {
-            Alert::toast('Berhasil menghapus Isi Menu');
-            return redirect('/Menu');
-        }
+        //
     }
 }

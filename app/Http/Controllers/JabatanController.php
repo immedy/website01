@@ -96,6 +96,11 @@ class JabatanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $p = jabatan::find($id);
+        $p->delete();
+        if ($p) {
+            Alert::toast('Berhasil Menghapus Pejabat');
+            return redirect('/jabatan');
+        }
     }
 }

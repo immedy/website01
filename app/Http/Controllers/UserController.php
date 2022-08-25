@@ -69,7 +69,7 @@ class UserController extends Controller
         $ValidasiUsername['password'] = bcrypt($ValidasiUsername['password']);
         $ValidasiUsername['status'] = 1;
         user::create($ValidasiUsername);
-        return redirect('/pegawai');
+        return redirect('/Menu');
     }
 }
 

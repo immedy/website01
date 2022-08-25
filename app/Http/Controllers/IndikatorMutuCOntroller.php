@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menuindikator;
+use App\Models\refindikator;
+use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class IndikatorMutuCOntroller extends Controller
 {
@@ -13,7 +17,10 @@ class IndikatorMutuCOntroller extends Controller
      */
     public function index()
     {
-        return view('dashboard.IndikatorMutu');
+        return view('dashboard.IndikatorMutu',[
+            'indikator' => refindikator::where("status","1")->get(),
+            'menuindikator' => Menuindikator::orderBy('tahun','desc')->orderBy('refindikator_id','asc')->get()
+        ]);
     }
 
     /**
@@ -34,7 +41,18 @@ class IndikatorMutuCOntroller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validasiJudulIndikator = $request->validate([
+            'tahun' => 'required',
+            'refindikator_id' => 'required'
+        ]);
+        $validasiJudulIndikator['user_id'] = auth()->user()->id;
+        $validasiJudulIndikator['refruangan_id'] = auth()->user()->refruangan_id;
+  
+        Menuindikator::create($validasiJudulIndikator);
+        if($validasiJudulIndikator){
+            Alert::Toast('Judul Besar Indikator Telah Terinput');
+            return redirect('/IndikatorMutu');
+        }
     }
 
     /**
@@ -45,7 +63,7 @@ class IndikatorMutuCOntroller extends Controller
      */
     public function show($id)
     {
-        //
+        return view('dashboard.DetailMenuIndikator');
     }
 
     /**

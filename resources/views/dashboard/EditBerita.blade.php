@@ -24,7 +24,8 @@
                                 <div class="input-group input-group-merge">
                                     <select class="form-select" id="refkategori_id" name="refkategori_id"
                                         aria-label="Default select example">
-                                        <option selected disabled value="">{{ $berita->refkategori->deskripsi }}</option>
+                                        <option selected disabled value="">{{ $berita->refkategori->deskripsi }}
+                                        </option>
                                         @foreach ($kategori as $p)
                                             <option value="{{ $p->id }}">{{ $p->deskripsi }}</option>
                                         @endforeach
@@ -36,7 +37,8 @@
                             <label class="col-sm-2 col-form-label" for="basic-default-email">Kategori</label>
                             <div class="col-sm-10">
                                 <div class="col mb-3">
-                                    <input class="form-control" type="file" id="foto" name="foto" />
+                                    <input class="form-control" type="file" id="foto" name="foto"
+                                        value="{{ $p->foto }}" />
                                     <label for="formFile" class="form-label">Upload Foto Berita [JPEG, Max 2MB]</label>
                                 </div>
                             </div>

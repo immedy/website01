@@ -38,7 +38,12 @@
                         @endif
                         <td style="text-align: right">
                             <a href="#" class="bx bx-edit btn btn-icon btn-outline-primary" style="left:"></a>
-                            <a href="#" class="bx bx-trash-alt btn btn-icon btn-outline-danger"></a>
+                            <form action="/jabatan/{{ $p->id }}" method="post" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button class="bx bx-trash-alt btn btn-icon btn-outline-danger"
+                                    onclick="return confirm ('Apakah Anda Yakin Menghapus Berita Ini ?')"> </button>
+                            </form>
                         </td>
                         </td>
                     </tr>
@@ -49,7 +54,7 @@
 @endsection
 <div class="modal fade" id="JabatanModal" data-bs-backdrop="static" tabindex="-1">
     <div class="modal-dialog">
-        <form class="modal-content" action="/InsertJabatan" method="post" enctype="multipart/form-data">
+        <form class="modal-content" action="/jabatan" method="post" enctype="multipart/form-data">
             @csrf
             <div class="modal-header">
                 <h5 class="modal-title" id="backDropModalTitle">Tambah Pengguna</h5>
@@ -59,7 +64,7 @@
                 <div class="row">
                     <div class="col mb-3">
                         <label for="nama" class="form-label">Nama Lengkap Dan Gelar</label>
-                        <input type="text" name="nama" id="nama" class="form-control" placeholder="Enter Name" />
+                        <input type="text" name="" id="nama" class="form-control" placeholder="Enter Name" />
                     </div>
                 </div>
                 <div class="row g-2 mb-2">

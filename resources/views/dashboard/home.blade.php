@@ -27,15 +27,18 @@
                 <tbody class="table-border-bottom-0">
                     @foreach ($dashboard as $p)
                         <tr>
-                            <td scope="col">1</td>
+                            <td scope="col">{{ $loop->iteration }}</td>
                             <td><i
                                     class="fab fa-angular fa-lg text-danger me"></i><strong>{{ $p->menu->deskripsi }}</strong>
                             </td>
                             <td>{{ $p->index }}</td>
                             <td><span class="badge bg-label-success me-1">Aktif</span></td>
                             <td style="text-align: right">
-                                <a href="/berita//edit" class="bx bx-edit btn btn-icon btn-outline-primary"></a>
-                                <form action="/berita/" method="post" class="d-inline">
+                                <a href="/Menu/{{ $p->id }}/edit"
+                                    class="bx bx-edit btn btn-icon btn-outline-primary"></a>
+                                <form action="/Menu/{{ $p->id }}" method="post" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
                                     <button class="bx bx-trash-alt btn btn-icon btn-outline-danger"
                                         onclick="return confirm ('Apakah Anda Yakin Menghapus Berita Ini ?')"> </button>
                                 </form>

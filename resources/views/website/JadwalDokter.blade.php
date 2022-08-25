@@ -10,7 +10,6 @@
             <thead>
                 <tr>
                     <th style="width: 2%">NO</th>
-                    <th style="width: 5%"></th>
                     <th style="width: 45%">Nama Dokter</th>
                     <th scope="col">Poliklinik</th>
                     <th style="width: 5%">Senin</th>
@@ -24,8 +23,6 @@
                 @foreach ($DokterSpesialis as $p)
                     <tr>
                         <th scope="row">{{ $loop->iteration }}</th>
-                        <td style="width: 5%"><img class="img-fluid" src="{{ asset('storage/' . $p->foto) }}"
-                                style="width: 50px; height: 50px; object-fit: cover;" alt=""> </td>
                         <td>{{ $p->nama }}[SPESIALIS {{ $p->refsmf->deskripsi }}]</td>
                         <td style="text-justify: center">{{ $p->refpoliklinik->deskripsi }}</td>
 
@@ -70,7 +67,6 @@
             <thead>
                 <tr>
                     <th style="width: 2%">NO</th>
-                    <th style="width: 5%"></th>
                     <th style="width: 45%">Nama Dokter</th>
                     <th scope="col">Poliklinik</th>
                     <th style="width: 5%">Senin</th>
@@ -84,8 +80,6 @@
                 @foreach ($DokterResiden as $p)
                     <tr>
                         <th scope="row">{{ $loop->iteration }}</th>
-                        <td style="width: 5%"><img class="img-fluid" src="{{ asset('storage/' . $p->foto) }}"
-                                style="width: 50px; height: 50px; object-fit: cover;" alt=""></td>
                         <td>{{ $p->nama }} [SPESIALIS {{ $p->refsmf->deskripsi }}]</td>
                         <td style="text-justify: center">{{ $p->refpoliklinik->deskripsi }}</td>
                         @if ($p->senin == 1)

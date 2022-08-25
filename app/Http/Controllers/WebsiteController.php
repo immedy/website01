@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\berita;
 use App\Models\dokter;
 use App\Models\jabatan;
+use App\Models\Menuindikator;
 use App\Models\menuinsert;
+use App\Models\refindikator;
+use App\Models\refkategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 
@@ -33,11 +36,8 @@ class WebsiteController extends Controller
     {
         return view('website.BeritaKesehatan', [
             'berita' => berita::all(),
+            'kategori' => refkategori::all()
         ]);
-    }
-    public function CapaianIndikatorPMKP()
-    {
-        return view('website.Indikatorpmkp');
     }
     public function JadwalDokter()
     {
@@ -120,4 +120,15 @@ class WebsiteController extends Controller
 
         ]);
     }
+    public function CapaianIndikatorPMKP()
+    {
+        return view('website.Indikatorpmkp',[
+            "indikator" => Menuindikator::orderBy('tahun','desc')->orderBy('refindikator_id','asc')->get()
+        ]);
+    }
+    public function IndikatorDetail()
+    {
+        return view('website.DetailIndikator.DetailIndikator');
+    }
+    
 }
