@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\CapaianIndikatorController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\IndikatorDetailController;
 use App\Http\Controllers\IndikatorMutuCOntroller;
@@ -53,7 +54,7 @@ Route::get('/berita/insert', [BeritaController::class, 'insert'])->middleware('a
 Route::resource('/berita', BeritaController::class)->middleware('auth');
 
 Route::resource('/IndikatorMutu', IndikatorMutuController::class)->middleware('auth');
-// route::resource('/IndikatorMutuDetail', IndikatorDetailController::class)->middleware('auth');
+Route::resource('/CapaianIndikator', CapaianIndikatorController::class)->middleware('auth');
 
 
 // website
