@@ -409,7 +409,7 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col mb-3">
-                        <label for="deskripsi" class="form-label">deskripsi Poliklinik</label>
+                        <label for="deskripsi" class="form-label">deskripsi Indikator Capaian</label>
                         <input type="text" name="deskripsi" id="deskripsi" class="form-control"
                             placeholder="Enter Name" class="text-uppercase" />
                     </div>

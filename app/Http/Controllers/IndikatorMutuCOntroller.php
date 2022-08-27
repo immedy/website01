@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Menuindikator;
 use App\Models\refindikator;
+use App\Models\refjuduldetailindikator;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -63,7 +64,10 @@ class IndikatorMutuCOntroller extends Controller
      */
     public function show($id)
     {
-        return view('dashboard.DetailMenuIndikator');
+        return view('dashboard.DetailMenuIndikator',[
+            'JudulIndikator' => Menuindikator::find($id),
+            'menu' => refjuduldetailindikator::where("refindikator_id","=",($id))->get()
+        ]);
     }
 
     /**

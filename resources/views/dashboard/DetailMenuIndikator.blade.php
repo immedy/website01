@@ -1,7 +1,7 @@
 @extends('layout.admin')
 @section('dashboard')
 <div class="card">
-    <h5 class="card-header">Light Table head</h5>
+    <h5 class="card-header">{{ $JudulIndikator->refindikator->deskripsi }} Tahun {{ $JudulIndikator->tahun }}</h5>
     <div class="table-responsive text-nowrap">
       <table class="table">
         <thead class="table-light">
@@ -15,7 +15,7 @@
           @foreach ( $menu as $p )
           <tr>
             <td>{{ $loop->iteration }}</td>
-            <td>{{ $p->refindikator->deskripsi}}</td>
+            <td>{{ $p->deskripsi}}</td>
            <td>
             <div class="container">
               <div class="row">

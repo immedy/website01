@@ -1,0 +1,29 @@
+id,jenis,judul,status
+1,1,Kepatuhan Kebersihan Tangan ,1
+2,1,Kepatuhan Penggunaan Alat Pelindung Diri (APD),1
+3,1,Kepatuhan identifikasi pasien,1
+4,1,Waktu Tanggap Operasi Seksio Sesarea Emergensi ,1
+5,1,Waktu Tunggu Rawat Jalan ,1
+6,1,Penundaan operasi elektif,1
+7,1,Kepatuhan Waktu Visite  Dokter ,1
+8,1,Pelaporan Hasil Kritis Laboratorium ,1
+9,1,Kepatuhan penggunaan formularium,1
+10,1,Kepatuhan Terhadap Alur Klinis (Clinical Pathway),1
+11,1,Kepatuhan Upaya Pencegahan Resiko Pasien Jatuh ,1
+12,1,Kecepatan Waktu Tanggap Komplain ,1
+13,1,Kepuasan Pasien,1
+14,2,Kelengkapan Assesmen Awal medis dalam waktu 24 Jam Setelah Pelayanan pada pasien Obgyn,1
+15,2,Pertolongan persalinan melalui seksio caesaria,1
+16,2,Status Fsiologi selama anatesi pada pasien Obgyn,1
+17,2,Kelengkapan informed consent setelah mendapatkan informasi yang jelas pada pasien Obgyn,1
+18,2,Infeksi Daerah Operasi (IDO) pada pasien Obgyn,1
+19,3,Kematian ibu melahirkan karena pendarahan,1
+20,3,Kematian ibu melahirkan karena eklamsi,1
+21,3,Respon time cito SC,1
+22,3,Angka kepuasan pasien rawat inap kebidanan,1
+23,4,Kepatuhan Identifikasi pada Pasien Obgyn,1
+24,4,Kepatuhan pengisian Tulbakon pada pasien Rawat inap Kebidanan  ,1
+25,4,Angka peningkatan keamanan obat yang perlu diwaspadai (HAM) di Rawat inap Kebidanan,1
+26,4,Kelengkapan pengisian penandaan lokasi operasi pada pasien obgyn,1
+27,4,Angka pengurangan risiko infeksi melalui kepatuhan cuci tangan di Rawat inap kebidanan,1
+28,4,Kepatuhan upaya pencegahan risiko cedera akibat pasien jatuh pada obgyn,1

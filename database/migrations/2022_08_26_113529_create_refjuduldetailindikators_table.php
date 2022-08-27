@@ -13,13 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('menuindikators', function (Blueprint $table) {
+        Schema::create('refjuduldetailindikators', function (Blueprint $table) {
             $table->id();
-            $table->year('tahun');
             $table->foreignId('refindikator_id');
-            $table->foreignId('user_id');
-            $table->foreignId('refruangan_id');
-            $table->timestamps();
+            $table->string('deskripsi');
+            $table->boolean('status');
         });
     }
 
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menuindikators');
+        Schema::dropIfExists('refjuduldetailindikators');
     }
 };
