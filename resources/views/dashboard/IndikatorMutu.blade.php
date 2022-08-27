@@ -31,7 +31,8 @@
                     <td><i class="fab fa-angular fa-lg text-danger"></i><strong>{{ $p->refindikator->deskripsi }}</strong>
                     </td>
                     <td style="text-align: right">
-                        <a href="/IndikatorMutu/{{ $p->id }}" class="bx bx-edit btn btn-icon btn-outline-primary" style="left:"></a>
+                        <a href="/IndikatorMutu/{{ $p->id }}" class="bx bx-bar-chart btn btn-icon btn-outline-primary" style="left:"></a>
+                        <a href="#" class="bx bx-comment-detail btn btn-icon btn-outline-success"></a>
                         <a href="#" class="bx bx-trash-alt btn btn-icon btn-outline-danger"></a>
                     </td>
                 </tr>    

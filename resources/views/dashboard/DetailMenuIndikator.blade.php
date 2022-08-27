@@ -66,7 +66,7 @@
                   <input id="smallInput"class="form-control form-control-sm" type="number" />
                 </div>
                 <div class="col">
-                  <label for="smallInput" class="form-label">Desember</label>
+                  <label for="smallInput" class="form-label" style="text-align: center">Desember</label>
                   <input id="smallInput"class="form-control form-control-sm" type="number" />
                 </div>
               </div>
@@ -78,9 +78,9 @@
         </tbody>
       </table>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-            Close
-        </button>
+        <a href="/IndikatorMutu" type="button" class="btn btn-outline-secondary" >
+            Kembali
+        </a>
         <button type="submit" class="btn btn-primary">Simpan</button>
     </div>
     </div>
