@@ -43,6 +43,7 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="/admin/assets/js/config.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -151,6 +152,12 @@
                         <a href="/kategori" class="menu-link">
                             <i class="bx bx-git-branch me-2"></i>
                             <div data-i18n="Analytics">Referensi Kategori</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="/CapaianIndikator" class="menu-link">
+                            <i class="bx bx-git-branch me-2"></i>
+                            <div data-i18n="Analytics">ujicoba</div>
                         </a>
                     </li>
                     <li class="menu-header small text-uppercase">

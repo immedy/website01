@@ -18,63 +18,15 @@
           @foreach ( $menu as $p )
           <tr>
             <td>{{ $loop->iteration }}</td>
-            <td>{{ $p->deskripsi}}</td>
-           <td>
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <label for="smallInput" class="form-label">Januari</label>
-                  <input id="januari" name="januari" class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">Februari</label>
-                  <input id="februari" name="februari"class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">Maret</label>
-                  <input id="maret" name="maret"class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">April</label>
-                  <input id="april" name="april"class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">Mei</label>
-                  <input id="mei" name="mei"class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">Juni</label>
-                  <input id="juni" name="juni"class="form-control form-control-sm" type="number" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <label for="smallInput" class="form-label">Juli</label>
-                  <input id="juli" name="juli"class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">Agustsus</label>
-                  <input id="agustus" name="agustus"class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">September</label>
-                  <input id="oktober" name="oktober"class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">Oktober</label>
-                  <input id="september" name="september" class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label">November</label>
-                  <input id="november" name="november" class="form-control form-control-sm" type="number" />
-                </div>
-                <div class="col">
-                  <label for="smallInput" class="form-label" style="text-align: center">Desember</label>
-                  <input id="desember" name="desember" class="form-control form-control-sm" type="number" />
-                </div>
-              </div>
-            </div>
+            <td>
+              {{ $p->deskripsi}}
+              <input id="menuindikator_id" name="menuindikator_id[]" value="{{ $JudulIndikator->id }}" hidden >
+              <input type="text" value="[{{ $JudulIndikator->refindikator->id }}]" id="refindikator_id" name="refindikator_id[]" hidden>
+            </td>
+           <td><label for="januari" class="form-label">Januari</label>
+            <input id="januari" name="januari[]"  class="form-control form-control-sm" type="text" />
            </td>
+           <td> </td>
           </tr>
           @endforeach
           
@@ -84,10 +36,10 @@
         <a href="/IndikatorMutu" type="button" class="btn btn-outline-secondary" >
             Kembali
         </a>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <button type="submit" class="btn btn-primary" style="text-align: right">Simpan</button>
     </div>
     </div>
-  </form> 
-  </div>
+  </form>
+</div>
 
 @endsection

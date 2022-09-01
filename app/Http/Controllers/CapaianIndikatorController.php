@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Detailindikator;
+use App\Models\refindikator;
 use Illuminate\Http\Request;
 
 class CapaianIndikatorController extends Controller
@@ -13,7 +15,9 @@ class CapaianIndikatorController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.ujicoba',[
+            "p" => refindikator::all()
+        ]);
     }
 
     /**
@@ -34,8 +38,7 @@ class CapaianIndikatorController extends Controller
      */
     public function store(Request $request)
     {
-        
-        dd($request);
+        //
     }
 
     /**
