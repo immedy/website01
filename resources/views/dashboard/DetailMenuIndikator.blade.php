@@ -4,7 +4,7 @@
   <form action="/CapaianIndikator" method="post">
     @csrf
     <h5 class="card-header">{{ $JudulIndikator->refindikator->deskripsi }} Tahun {{ $JudulIndikator->tahun }}</h5>
-    <input type="text" value="{{ $JudulIndikator->refindikator->deskripsi }}" id="refindikator_id" name="refindikator_id" hidden>
+    
     <div class="table-responsive text-nowrap">
       <table class="table">
         <thead class="table-light">
@@ -20,11 +20,11 @@
             <td>{{ $loop->iteration }}</td>
             <td>
               {{ $p->deskripsi}}
-              <input id="menuindikator_id" name="menuindikator_id[]" value="{{ $JudulIndikator->id }}" hidden >
+              <input id="menuindikator_id" name="menuindikator_id" value="{{ $JudulIndikator->id }}" hidden >
               <input type="text" value="[{{ $JudulIndikator->refindikator->id }}]" id="refindikator_id" name="refindikator_id[]" hidden>
             </td>
            <td><label for="januari" class="form-label">Januari</label>
-            <input id="januari" name="januari[]"  class="form-control form-control-sm" type="text" />
+            <input id="januari" name="januari"  class="form-control form-control-sm" type="text" />
            </td>
            <td> </td>
           </tr>

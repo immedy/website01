@@ -268,8 +268,7 @@
                 <div class="row">
                     <div class="col mb-3">
                         <label for="deskripsi" class="form-label">Jenis SMF</label>
-                        <input type="text" name="deskripsi" id="deskripsi" class="form-control"
-                            placeholder="Input Nama Dokter" />
+                        <input type="text" name="deskripsi" id="deskripsi" class="form-control" />
                     </div>
                 </div>
             </div>
