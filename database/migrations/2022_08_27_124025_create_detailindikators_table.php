@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('detailindikators', function (Blueprint $table) {
             $table->id();
             $table->foreignId('menuindikator_id');
-            $table->foreignId("refindikator_id");
+            $table->foreignId("refjuduldetailindikator_id");
             $table->smallInteger('januari');
             $table->smallInteger('februari');
             $table->smallInteger('maret');

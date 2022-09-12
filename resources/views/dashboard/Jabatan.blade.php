@@ -71,10 +71,12 @@
                     <div class="col mb-0">
                         <label for="dobBackdrop" class="form-label">Pilih Jabatan</label>
                         <select class="form-control" id="refjabatan_id" name="refjabatan_id">
+                            <datalist id="refjabatan_id">
                             <option selected disabled value="">Silahkan Pilih</option>
                             @foreach ($refjabatan as $p)
                                 <option value="{{ $p->id }}">{{ $p->deskripsi }}</option>
                             @endforeach
+                            </datalist>
                         </select>
                     </div>
                 </div>

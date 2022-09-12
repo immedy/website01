@@ -20,7 +20,7 @@ class IndikatorMutuCOntroller extends Controller
     {
         return view('dashboard.IndikatorMutu',[
             'indikator' => refindikator::where("status","1")->get(),
-            'menuindikator' => Menuindikator::with(['refindikator'])->orderBy('tahun','desc')->orderBy('refindikator_id','asc')->get()
+            'menuindikator' => Menuindikator::with('refindikator')->orderBy('tahun','desc')->orderBy('refindikator_id','asc')->get()
         ]);
     }
 
@@ -62,11 +62,13 @@ class IndikatorMutuCOntroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id,  Request $request )
+    public function show($request, $id)
     {
+      
         return view('dashboard.DetailMenuIndikator',[
             'JudulIndikator' => Menuindikator::find($id),
-            'menu' => refjuduldetailindikator::where("refindikator_id", $request->refindikator)->get()
+            
+            'menu' => refjuduldetailindikator::where("refindikator_id","=", $id($request->refindikator_id))->get()
         ]);
     }
 

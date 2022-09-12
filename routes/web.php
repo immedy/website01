@@ -8,6 +8,7 @@ use App\Http\Controllers\IndikatorMutuCOntroller;
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\UjiCObaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WebsiteController;
 use GuzzleHttp\Middleware;
@@ -54,7 +55,7 @@ Route::get('/berita/insert', [BeritaController::class, 'insert'])->middleware('a
 Route::resource('/berita', BeritaController::class)->middleware('auth');
 
 Route::resource('/IndikatorMutu', IndikatorMutuController::class)->middleware('auth');
-// Route::resource('/CapaianIndikator', CapaianIndikatorController::class)->middleware('auth');
+Route::get('/UjiCoba', [UjiCobaController::class,'index']);
 
 
 // website
@@ -75,4 +76,5 @@ Route::get('/InstalasiLab', [WebsiteController::class, 'InstalasiLab']);
 Route::get('/InstalasiRadiologi', [WebsiteController::class, 'InstalasiRadiologi']);
 Route::get('/InstalasiFarmasi', [WebsiteController::class, 'InstalasiFarmasi']);
 Route::get('/InstalasiCareUnit', [WebsiteController::class, 'InstalasiCareUnit']);
-Route::get('/InstalasiNonMedik', [WebsiteController::class, 'InstalasiNonMedik']);
+Route::get('/InstalasiPenunjang', [WebsiteController::class, 'InstalasiNonMedik']);
+Route::get('/InstalasiKamarOperasi', [WebsiteController::class, 'InstalasiKamarOperasi']);

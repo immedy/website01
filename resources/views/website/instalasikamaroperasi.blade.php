@@ -2,7 +2,7 @@
 @section('LayoutWebsite')
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class=" section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-            <h1 class="mb-0">INSTALASI PENUNJANG</h1>
+            <h1 class="mb-0">INSTALASI KAMAR OPERASI</h1>
         </div>
         @foreach ($P as $p)
             <div class="row mb-5">
@@ -11,7 +11,7 @@
                         <div class="row g-0">
                             <div class="col-md-4">
                                 <img class="card-img card-img-left" src="{{ asset('storage/' . $p->foto) }}"
-                                    alt="Card image" />
+                                    alt="Card image" style="width: auto" />
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">

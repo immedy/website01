@@ -74,8 +74,11 @@
                             <a href="InstalasiRadiologi" class="dropdown-item">Instalasi Radiologi</a>
                             <a href="/InstalasiFarmasi" class="dropdown-item">Instalasi Farmasi</a>
                             <a href="/InstalasiCareUnit" class="dropdown-item">Intensive Care Unit</a>
-                            <a href="/InstalasiNonMedik" class="dropdown-item">Instalasi Penunjang Non Medik</a>
+                            <a href="/InstalasiPenunjang" class="dropdown-item ">Instalasi Penunjang</a>
                         </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#" class="nav-item nav-link">Registrasi Online</a>
                     </div>
 
                     <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal"

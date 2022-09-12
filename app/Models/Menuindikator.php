@@ -9,8 +9,9 @@ class Menuindikator extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    
     public function refindikator()
     {
-        return $this->belongsTo(refindikator::class);
+        return $this->belongsTo(refindikator::class,"refindikator_id","id");
     }
 }

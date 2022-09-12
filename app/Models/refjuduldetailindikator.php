@@ -9,5 +9,8 @@ class refjuduldetailindikator extends Model
 {
     use HasFactory;
     public $timestamps = false;
-    
+    public function refindikator()
+    {
+        return $this->belongsTo(refindikator::class);
+    }
 }

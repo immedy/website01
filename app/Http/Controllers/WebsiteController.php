@@ -120,6 +120,13 @@ class WebsiteController extends Controller
 
         ]);
     }
+    public function InstalasiKamarOperasi()
+    {
+        return view('website.instalasikamaroperasi', [
+            'P' => menuinsert::where("menu_id", "=", "9")->get()
+
+        ]);
+    }
     public function CapaianIndikatorPMKP()
     {
         return view('website.Indikatorpmkp',[
