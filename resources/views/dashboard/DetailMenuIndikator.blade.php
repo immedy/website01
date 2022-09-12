@@ -19,9 +19,7 @@
           <tr>
             <td>{{ $loop->iteration }}</td>
             <td>
-              {{ $p->deskripsi}}
-              <input id="menuindikator_id" name="menuindikator_id" value="{{ $JudulIndikator->id }}" hidden >
-              <input type="text" value="[{{ $JudulIndikator->refindikator->id }}]" id="refindikator_id" name="refindikator_id" hidden>
+              {{ $p->deskripsi }}
             </td>
            <td><label for="januari" class="form-label">Januari</label>
             <input id="januari" name="januari"  class="form-control form-control-sm" type="text" />

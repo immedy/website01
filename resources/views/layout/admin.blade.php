@@ -154,12 +154,6 @@
                             <div data-i18n="Analytics">Referensi Kategori</div>
                         </a>
                     </li>
-                    <li class="menu-item">
-                        <a href="/UjiCoba" class="menu-link">
-                            <i class="bx bx-git-branch me-2"></i>
-                            <div data-i18n="Analytics">Uji Coba</div>
-                        </a>
-                    </li>
                     <li class="menu-header small text-uppercase">
                         <span class="menu-header-text">Logout</span>
                     </li>

@@ -9,4 +9,8 @@ class refindikator extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+    public function refjuduldetailindikator()
+    {
+        return $this->belongsTo(refjuduldetailindikator::class);
+    }
 }

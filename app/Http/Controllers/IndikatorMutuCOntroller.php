@@ -62,13 +62,12 @@ class IndikatorMutuCOntroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($request, $id)
+    public function show($id)
     {
       
         return view('dashboard.DetailMenuIndikator',[
             'JudulIndikator' => Menuindikator::find($id),
-            
-            'menu' => refjuduldetailindikator::where("refindikator_id","=", $id($request->refindikator_id))->get()
+            'menu' => refjuduldetailindikator::where('refindikator_id','=',$id('refindikator_id'))->get()
         ]);
     }
 
