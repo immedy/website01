@@ -137,5 +137,9 @@ class WebsiteController extends Controller
     {
         return view('website.DetailIndikator.DetailIndikator');
     }
+    public function HalamanError()
+    {
+        return view('website.error');
+    }
     
 }

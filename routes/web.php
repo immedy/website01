@@ -78,3 +78,4 @@ Route::get('/InstalasiFarmasi', [WebsiteController::class, 'InstalasiFarmasi']);
 Route::get('/InstalasiCareUnit', [WebsiteController::class, 'InstalasiCareUnit']);
 Route::get('/InstalasiPenunjang', [WebsiteController::class, 'InstalasiNonMedik']);
 Route::get('/InstalasiKamarOperasi', [WebsiteController::class, 'InstalasiKamarOperasi']);
+Route::get('/HalamanError',[WebsiteController::class, 'HalamanError']);

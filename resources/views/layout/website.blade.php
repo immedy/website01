@@ -78,7 +78,7 @@
                         </div>
                     </div>
                     <div class="nav-item">
-                        <a href="#" class="nav-item nav-link">Registrasi Online</a>
+                        <a href="/HalamanError" class="nav-item nav-link">Registrasi Online</a>
                     </div>
 
                     <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal"
