@@ -16,7 +16,7 @@
                     </div>
                     <h4 class="mb-3">Tahun {{ $p->tahun }}</h4>
                     <p class="m-0">{{ $p->refindikator->deskripsi }}</p>
-                    <a class="btn btn-lg btn-primary rounded" href="/HalamanError">
+                    <a class="btn btn-lg btn-primary rounded" href="/CapaianIndikatorPMKP/Detail">
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
