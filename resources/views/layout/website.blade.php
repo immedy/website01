@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="/website/img/favicon.ico" rel="icon">
+    <link href="website/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,14 +23,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="/website/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="/website/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="{{ asset('website/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('website/lib/animate/animate.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="/website/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('website/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="/website/css/style.css" rel="stylesheet">
+    <link href="{{ asset('website/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -91,7 +91,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="/website/img/dara1.jpg" alt="Image">
+                    <img class="w-100" src="website/img/dara1.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-1" style="max-width: 670px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown"></h5>
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="/website/img/dara2.jpg" alt="Image">
+                    <img class="w-100" src="website/img/dara2.jpg" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown"></h5>
@@ -165,14 +165,14 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/website/lib/wow/wow.min.js"></script>
-    <script src="/website/lib/easing/easing.min.js"></script>
-    <script src="/website/lib/waypoints/waypoints.min.js"></script>
-    <script src="/website/lib/counterup/counterup.min.js"></script>
-    <script src="/website/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="{{ asset('website/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('website/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('website/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('website/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('website/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="/website/js/main.js"></script>
+    <script src="{{ asset('website/js/main.js') }}"></script>
 </body>
 
 </html>

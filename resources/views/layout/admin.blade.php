@@ -22,18 +22,18 @@
         rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="/admin/assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/fonts/boxicons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="/admin/assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="/admin/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="/admin/assets/css/demo.css" />
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ asset('admin/assets/css/demo.css') }}" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
-    <link rel="stylesheet" href="/admin/assets/vendor/libs/apex-charts/apex-charts.css" />
-    <link rel="stylesheet" type="text/css" href="/admin/assets/css/trix.css">
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/assets/css/trix.css') }}">
 
     <!-- Page CSS -->
 
@@ -289,26 +289,26 @@
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
-    <script src="/admin/assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="/admin/assets/vendor/libs/popper/popper.js"></script>
-    <script src="/admin/assets/vendor/js/bootstrap.js"></script>
-    <script src="/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="{{ asset('admin/assets/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('admin/assets/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('admin/assets/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
 
-    <script src="/admin/assets/vendor/js/menu.js"></script>
+    <script src="{{ asset('admin/assets/vendor/js/menu.js') }}"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="/admin/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="{{ asset('admin/assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
 
     <!-- Main JS -->
-    <script src="/admin/assets/js/main.js"></script>
+    <script src="{{ asset('admin/assets/js/main.js') }}"></script>
 
     <!-- Page JS -->
-    <script src="/admin/assets/js/dashboards-analytics.js"></script>
+    <script src="{{ asset('admin/assets/js/dashboards-analytics.js') }}"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script type="text/javascript" src="/admin/assets/css/trix.js"></script>
+    <script type="text/javascript" src="{{ '/admin/assets/css/trix.js' }}"></script>
 
 
     @include('sweetalert::alert')
