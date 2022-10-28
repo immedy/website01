@@ -116,7 +116,7 @@
                 <h1 class="mb-0">Sesuai Motto Rumah Sakit MELAYANI SEPENUH DAYAKU</h1>
             </div>
             <div class="row g-5">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="row g-5">
                         <div class="col-12 wow zoomIn" data-wow-delay="0.2s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
@@ -127,6 +127,10 @@
                             <p class="mb-0">Menjadi rumah sakit rujukan bagi 7 Kecamatan yang ada dihulu mahakam
                                 Kabupaten Kutai Kartanegara</p>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row g-5">
                         <div class="col-12 wow zoomIn" data-wow-delay="0.6s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                                 style="width: 60px; height: 60px;">
@@ -138,13 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4  wow zoomIn" data-wow-delay="0.9s" style="min-height: 350px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.1s"
-                            src="website/img/feature.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="row g-5">
                         <div class="col-12 wow zoomIn" data-wow-delay="0.4s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
@@ -155,6 +153,10 @@
                             <p class="mb-0">Mempunyai Tenaga Kesehatan Yang profesional di setiap bidang yang ada
                                 di rumah sakit </p>
                         </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row g-5">
                         <div class="col-12 wow zoomIn" data-wow-delay="0.8s">
                             <div class="bg-primary rounded d-flex align-items-center justify-content-center mb-3"
                                 style="width: 60px; height: 60px;">
@@ -167,6 +169,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Features Start -->
 
