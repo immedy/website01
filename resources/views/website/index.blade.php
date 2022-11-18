@@ -9,7 +9,7 @@
     <div class="container-fluid facts py-9 pt-lg-0">
         <div class="container py-5 pt-lg-10">
             <div class="row gx-3-mid">
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                <div class="col-lg wow zoomIn" data-wow-delay="0.1s">
                     <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
                         style="height: 150px;">
                         <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
@@ -18,12 +18,12 @@
                         </div>
                         <div class="ps-4">
                             <h6 class="text-white mb-0">Poliklinik</h6>
-                            <h4 class="text-white mb-0">Senin - Kamis</h4>
-                            <h4 class="text-white mb-0">08.00 - 14.00</h4>
+                            <h4 class="text-white mb-0">Senin - Jumat</h4>
+                            <h4 class="text-white mb-0">08.00 - 13.00</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                <div class="col-lg wow zoomIn" data-wow-delay="0.3s">
                     <div class="bg-light shadow d-flex align-items-center justify-content-center p-4"
                         style="height: 150px;">
                         <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
@@ -33,20 +33,6 @@
                         <div class="ps-4">
                             <h5 class="text-primary mb-0">Instalasi Gawat Darurat</h5>
                             <h1 class="mb-0">24 JAM</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
-                    <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
-                        style="height: 150px;">
-                        <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
-                            style="width: 60px; height: 60px;">
-                            <i class="fa fa-stethoscope text-primary"></i>
-                        </div>
-                        <div class="ps-4">
-                            <h6 class="text-white mb-0">Poliklinik</h6>
-                            <h4 class="text-white mb-0">Jumat</h4>
-                            <h4 class="text-white mb-0">08.00 - 10.30</h4>
                         </div>
                     </div>
                 </div>
@@ -99,7 +85,7 @@
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
                         <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s"
-                            src="website/img/about.jpg" style="object-fit: cover;">
+                            src="website/img/baliho.jpg" style="object-fit: cover;">
                     </div>
                 </div>
             </div>

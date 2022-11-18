@@ -78,6 +78,9 @@
                         </div>
                     </div>
                     <div class="nav-item">
+                        <a href="#" class="nav-item nav-link">Kritik/Saran/Pengaduan</a>
+                    </div>
+                    <div class="nav-item">
                         <a href="#" class="nav-item nav-link">Registrasi Online</a>
                     </div>
 
